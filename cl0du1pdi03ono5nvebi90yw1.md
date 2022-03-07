@@ -26,7 +26,7 @@ end
 
 # Problem
 
-As described by Adrian, you notice that if you add more variables, the number of lines in the initializer increased with each variable you add there. 
+As described by Adrian, you notice that if you add more variables, the number of lines in the initializer will increase with each variable you add there. 
 
 Let's say you want to add 4 more variables: 
 
@@ -52,7 +52,7 @@ end
 
 # Solutions
 
-You can find all solutions on [Replit.com](https://replit.com/@lucianghinda/AssignInstanceVariables) or on in a Github repository.
+You can find all solutions on [Replit.com](https://replit.com/@lucianghinda/AssignInstanceVariables).
 
 ## Refactor to use hash
 
