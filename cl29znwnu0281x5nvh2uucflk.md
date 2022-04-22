@@ -180,6 +180,8 @@ def transform(x)
 x && 1 || 0
 end
 ```
+([source](https://stackoverflow.com/questions/13537206/how-do-i-convert-boolean-values-to-integers) for the idea to convert boolean to integers using short-circuit operators)
+
 When x is true: 
 
 `true && 1 || 0` => `(true && 1) || 0` => `1 || 0`  =>  `1`
