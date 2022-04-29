@@ -39,9 +39,11 @@ On Twitter there are some big communities that anyone can join:
 
 # Discord and Slack
 
-[The Spicy Web](https://discord.com/invite/CUuYVH7Qa9) by [Jared White](https://twitter.com/jaredcwhite) is a "chat room all about indie content publishing & web development". 
+[The Spicy Web](https://discord.com/invite/CUuYVH7Qa9) by [Jared White](https://twitter.com/jaredcwhite) is a *"chat room all about indie content publishing & web development"*. 
 
 [Kasper helps your Ruby&Rails](https://discord.com/invite/Kx3VABnB) by [Kasper Timm Hansen](https://twitter.com/kaspth) is a chat room with focused dicussions about development and great suggestions about code architecture, solutions, code quality.
+
+[Ruby InfoSec](https://discord.com/invite/CcqkHnuyUK)by [postmodern](https://twitter.com/postmodern_mod3) is a chat room focused on Ruby & InfoSec: *"The goal of this server is to help answer questions, educate others, highlight other Ruby InfoSec projects, and counter anti-Ruby FUD with information"*
 
 [Ruby on Rails Link](https://www.rubyonrails.link) is one of the biggest online Ruby community.
 
