@@ -17,8 +17,8 @@ I would start in the following way:
 7. After watching, go open Github/Gitlab and review your code and try to add comments on what you think should be changed. That PR/MR done previously will help with this. 
 8. Here is how to do the review: First, think about one of the principles you saw explained in the video and read your PR/MR, and add comments there with what to refactor to follow that principle. Then think about the second principle explained and then reread the code and add comments about this second principle. This is called perspective-based review, and it works better when you focus on one thing at a time.
 9. When finished with your review, go ahead and refactor based on the comments you added there.
-8. Watch this video [Rules, by Sandi Metz](https://www.youtube.com/watch?v=npOGOmkxuio) and then go ahead and do the same process: Do the review and then refactor your code again.
-8. Then watch this video [Aloha Ruby Conf 2012 Refactoring from Good to Great by Ben Orenstein](https://www.youtube.com/watch?v=DC-pQPq0acs) and again do the same process: review + refactoring
+10. Watch this video [Rules, by Sandi Metz](https://www.youtube.com/watch?v=npOGOmkxuio) and then go ahead and do the same process: Do the review and then refactor your code again.
+11. Then watch this video [Aloha Ruby Conf 2012 Refactoring from Good to Great by Ben Orenstein](https://www.youtube.com/watch?v=DC-pQPq0acs) and again do the same process: review + refactoring
 
 At this point, you will know Ruby Syntax and OOP principles in Ruby. 
 
