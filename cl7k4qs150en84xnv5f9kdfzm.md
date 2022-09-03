@@ -44,4 +44,6 @@ After doing this, it is time that you start using static analysis tools:
 
 From now you can start experimenting freely with Ruby and see what you like, what your style is what makes you happy. 
 
+---
+Follow me on Twitter [@lucianghinda](https://twitter.com/lucianghinda) where I share/retweet mostly Ruby and Rails content
 
