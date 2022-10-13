@@ -1,4 +1,4 @@
-# Working with frozen strings in Ruby
+# Alternative ways to freeze a string in Ruby
 
 If you want to freeze strings in Ruby there are at least two ways to do this:
 
@@ -19,10 +19,14 @@ puts a.frozen? # will return true
 b = "this is a frozen string".freeze
 puts b.frozen? # will return true 
 
-puts str1.object_id.equal?(str2.object_id) # will return false
+puts a.equal?(b) # will return true
+puts a.object_id == b.object_id # true
 ```
 
-But as you notice, freezing a string will not make it so that it will re-use the previous object even if the string object cannot be modified, like it works for symbols:
+As you notice `a` and `b` seem to be the same object instance. 
+No new objects are instantiated. 
+
+The same happens for symbols: 
 
 ```ruby
 s = :a_new_symbol_open
@@ -34,9 +38,7 @@ puts m.frozen? # will, of course return true
 puts s.object_id == m.object_id # will return true
 ```
 
-As you can see, working with symbols, if you re-use the symbol, you will get the same object id => no new objects are instantiated.
-
-How can you achieve this with Strings?
+## Alternative ways to freeze a String
 
 Enter a kind of strange method that can be applied on Strings: `-`
 
