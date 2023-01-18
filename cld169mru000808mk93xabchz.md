@@ -49,11 +49,13 @@ Why? SRP and limiting the changes. Here is a short example:
 
 **The data between a controller and view should only be transferred via local variables, not instance variables.** This is a bit bigger topic to cover, and I will probably write another article explaining this in detail.
 
-Briefly, there are two main reasons:
+Briefly, there are three main reasons:
 
 * (1) undefined controller instance variables are `nil` thus will not throw `NameError` but silently be nil =&gt; causing business logic errors when used in conditionals (a condition if false because the variable is undefined, not because the query returned nil)
     
 * (2) instance variables leak into all partials referenced, including all nested ones =&gt; it creates direct dependencies to the action in the controller instead of making partials dependent only on the call
+    
+* (3) instance variables can be added by using concerns and callbacks and can quickly become hard to track what instance variable is available in a view and what is the source for that data
     
 
 ## Code Review
