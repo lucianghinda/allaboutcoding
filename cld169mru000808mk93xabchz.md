@@ -64,11 +64,11 @@ Considering the guidelines, I can say the following things about the initial cod
 
 * The `index` the method is doing too many =&gt; breaks SRP -&gt; has logic to create Action Record scopes, instantiates some variables from those methods, and paginates if needed
     
-* The `index` the method will expose instance variables to pass data to the view
+* The `index` method uses instance variables to pass data to the view
     
-* If I need to change the search =&gt; I need to change something in `index`
+* If I need to change the search =&gt; I need to change something in `index` and it should not be the case because changing the search query (for example, from `where` to scopes) should not change the way rendering works or the logic in the view.
     
-* If I need to change the way pagination works =&gt; I need to change something in the `index`
+* If I need to change the way pagination works =&gt; I need to change something in the `index` and again, it should not be the case as changing the way pagination works does not change the logic of rendering nor the view logic
     
 
 ## Refactoring
