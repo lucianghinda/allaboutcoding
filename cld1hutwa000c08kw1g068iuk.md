@@ -38,7 +38,7 @@ render locals: { user: user }
 
 And the moment we upload/know/recall in our mind that `{ user: }` means that there is a variable or method named `user` defined - it is just another way to hide complexity and provide brevity.
 
-## In defense of breavity
+## In defense of brevity
 
 Regarding the idea of readability + Ruby + better code, here the opinions can be subjective.
 
@@ -60,7 +60,7 @@ and then here is what he says about what makes code beautiful:
 > 
 > “**Brevity can also mean the elimination of redundancy**. Redundancy is defined as the duplication of information. When information is duplicated, the cost of maintaining consistency can be quite high. And because a considerable amount of time can be spent maintaining consistency, redundancy will lower programming productivity.”
 
-## Short-hand syntax bring breavity
+## Short-hand syntax helps with brevity
 
 Thus for me, the short-hand syntax is a beautiful example of the elimination of redundancy:
 
