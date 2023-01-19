@@ -239,19 +239,17 @@ class BooksController < ApplicationController
   private
 
     def user
-      return @_user if defined? @_user
-
-      @_user = User.find(params[:user_id])
+      @_user ||= User.find(params[:user_id])
     end
 
     def books
-      return @_books if defined? @_books
+      @_books ||= begin
+        user_books = user.books
+        user_books = user_books.where(author: params[:author]) if params[:author].present?
+        user_books = user_books.page(params[:page]) if params[:page].present?
 
-      @_books = user.books
-      @_books = @_books.where(author: params[:author]) if params[:author].present?
-      @_books = @_books.page(params[:page]) if params[:page].present?
-
-      @_books
+        user_books
+      end
     end
 end
 ```
@@ -277,9 +275,7 @@ class BooksController < ApplicationController
     def books = query_service.books
 
     def query_service
-      return @_query_service if defined? @_query_service
-
-      @_query_service = UserWithBooksQuery.call(
+      @_query_service ||= UserWithBooksQuery.call(
         user_id: params[:user_id],
         author: params[:author],
         page: params[:page]
@@ -303,7 +299,7 @@ class UserWithBooksQuery
 end
 ```
 
-I think this is a good solution worth exploring if you/your team are using services. I did not presented this from start as I know quite a few teams that are using services in specific way (only to call external services) and they use models for everything else. For the purpose of this article it really does not matter where the logic is hidden.
+This is a good solution worth exploring if you/your team are using services. I did not present this from the start as I know quite a few teams that are using services in a specific ways (only to call external services), and they use models for everything else. For this article, it does not matter where the logic is hidden.
 
 ### Procedural action
 
@@ -326,19 +322,17 @@ class BooksController < ApplicationController
   private
 
     def user
-      return @_user if defined? @_user
-
-      @_user = User.find(params[:user_id])
+      @_user ||= User.find(params[:user_id])
     end
 
     def get_filtered_books
-      return @_books if defined? @_books
+      @_books ||= begin
+        user_books = user.books
+        user_books = user_books.where(author: params[:author]) if params[:author].present?
+        user_books = user_books.page(params[:page]) if params[:page].present?
 
-      @_books = user.books
-      @_books = @_books.where(author: params[:author]) if params[:author].present?
-      @_books = @_books.page(params[:page]) if params[:page].present?
-
-      @_books
+        user_books
+      end
     end
 end
 ```
@@ -383,15 +377,11 @@ class BooksController < ApplicationController
   private
 
     def user
-      return @_user if defined? @_user
-
-      @_user = User.find(params[:user_id])
+      @_user ||= User.find(params[:user_id])
     end
 
     def books
-      return @_books if defined? @_books
-
-      @_books = user.books.filter_by(author: params[:author]).page(params[:page])
+      @_books ||= user.books.filter_by(author: params[:author]).page(params[:page])
     end
 end
 
