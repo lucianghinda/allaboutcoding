@@ -143,8 +143,8 @@ Thus I can say this method could look something like this:
 ```ruby
 def books
   user.books.
-    then { filter_by_author(_1)  if params[:author].present? }.
-    then { paginate(_1) if params[:page].present? }
+    then { filter_by_author(_1) }.
+    then { paginate(_1) }
 end
 ```
 
@@ -155,16 +155,24 @@ I also want to keep the satisfying SRP. If I need to change, for example, someth
 ```ruby
 def books
   user.books.
-    then { filter_by_author(_1)  if params[:author].present? }.
-    then { paginate(_1) if params[:page].present? }
+    then { filter_by_author(_1) }.
+    then { paginate(_1) }
 end
 
-def filter_by_author(books) = books.where(author: params[:author])
+def filter_by_author(books)
+  return books unless params[:author].present?
 
-def paginate(books) = books.page(params[:page])
+  books.where(author: params[:author])
+end
+
+def paginate(books)
+  return books unless params[:page].present?
+
+  books.page(params[:page])
+end
 ```
 
-In practice, what I want to achieve is to make sure that when a change is needed, it should be limited to only the method that is related to the scope of the change.
+In practice, I want to make sure that when a change is needed, it should be limited to only the method related to the scope of the change.
 
 An example of such change could be that I define on Book in a new scope like:
 
@@ -188,25 +196,228 @@ class BooksController < ApplicationController
   def index = render locals: { user:, books: }
 
   private
+
     def user
       @_user ||= User.find(params[:user_id])
     end
 
     def books
       user.books.
-        then { filter_by_author(_1) if params[:author].present? }.
-        then { paginate(_1) if params[:page].present? }
+        then { filter_by_author(_1) }.
+        then { paginate(_1) }
     end
 
-    def filter_by_author(books) = books.where(author: params[:author])
+    def filter_by_author(books)
+      return books unless params[:author].present?
 
-    def paginate(books) = books.page(params[:page])
+      books.where(author: params[:author])
+    end
+
+    def paginate(books)
+      return books unless params[:page].present?
+
+      books.page(params[:page])
+    end
 end
 ```
+
+## Alternatives
+
+There was a good discussion on [/r/rails](https://www.reddit.com/r/rails/comments/10f09zp/refactoring_instance_variables_to_local_variables/) about this article with some good points against various things I presented here.
+
+So here are some alternatives of how the cood looks like:
+
+### Move logic from controller to `books` without going deeper
+
+```ruby
+# app/controllers/books_controller.rb
+
+class BooksController < ApplicationController
+
+  def index = render locals: { user:, books: }
+
+  private
+
+    def user
+      return @_user if defined? @_user
+
+      @_user = User.find(params[:user_id])
+    end
+
+    def books
+      return @_books if defined? @_books
+
+      @_books = user.books
+      @_books = @_books.where(author: params[:author]) if params[:author].present?
+      @_books = @_books.page(params[:page]) if params[:page].present?
+
+      @_books
+    end
+end
+```
+
+My review of this is that I feel somehow that `books` is doing too much, but in the same time its scope can be summarised as querying user books based on some conditions.
+
+Usually when I have to choose between a longer method or multiple shorter methods I choose shorter methods becuase I think it allows the reader to decide if they want to go down to details or if they want to read the code at a higher level.
+
+### Using a query object
+
+This solution is based on the one provided by [markevich's comment](https://www.reddit.com/r/rails/comments/10f09zp/comment/j4wvlmh):
+
+```ruby
+# app/controllers/books_controller.rb
+class BooksController < ApplicationController
+
+  def index = render locals: { user:, books: }
+
+  private
+
+    def user = query_service.user
+
+    def books = query_service.books
+
+    def query_service
+      return @_query_service if defined? @_query_service
+
+      @_query_service = UserWithBooksQuery.call(
+        user_id: params[:user_id],
+        author: params[:author],
+        page: params[:page]
+      )
+    end
+end
+
+# app/services/user_with_books_query.rb
+class UserWithBooksQuery
+  UserWithBooksContract = Struct.new(:user, :books, keyword_init: true)
+
+  def self.call(user_id:, author:, page:)
+    user = User.find(user_id)
+
+    books = user.books
+    books = books.where(author: author) if author
+    books = books.paginate(page) if page
+
+    UserWithBooksContract.new(user:, books:)
+  end
+end
+```
+
+I think this is a good solution worth exploring if you/your team are using services. I did not presented this from start as I know quite a few teams that are using services in specific way (only to call external services) and they use models for everything else. For the purpose of this article it really does not matter where the logic is hidden.
+
+### Procedural action
+
+This proposal was added by @[Paweł Świątkowski](@katafrakt) as a comment to this article and something similar was proposed by [elementboarder on /r/rails](https://www.reddit.com/r/rails/comments/10f09zp/comment/j4w5hiu)
+
+And the main idea is that the action method should describe the logic in a procedural way
+
+**Option 1:**
+
+```ruby
+class BooksController < ApplicationController
+
+  def index
+    user = User.find(params[:user_id])
+    books = get_filtered_books
+
+    render locals: { user:, books: }
+  end
+
+  private
+
+    def user
+      return @_user if defined? @_user
+
+      @_user = User.find(params[:user_id])
+    end
+
+    def get_filtered_books
+      return @_books if defined? @_books
+
+      @_books = user.books
+      @_books = @_books.where(author: params[:author]) if params[:author].present?
+      @_books = @_books.page(params[:page]) if params[:page].present?
+
+      @_books
+    end
+end
+```
+
+I think this works. The only comment I have here is that it brings the need to invent these `get_<name>` or `fetch_<name>` ... so that in this specific case to remove the collision between local variable inside the method and the name of another method.
+
+**Option 2**
+
+```ruby
+# app/controllers/books_controller.rb
+
+class BooksController < ApplicationController
+
+  def index
+    user = User.find(params[:user_id])
+    books = user.books.filter_by(author: params[:author]).page(params[:page])
+
+    render locals: { user:, books: }
+  end
+end
+
+# app/models/books
+
+class Book < ApplicationRecord
+  scope :filter_by, -> (author) { where(author: author) }
+end
+```
+
+The move of the query logic to the model makes a lot of sense to me. I did not do that in my refactoring as I started with an example where the author put the logic in the controller and I only wanted to cleanup the controller. But moving it to model is the right way to go. This is also very short so it is a very good candidate for a good solution.
+
+## Simplicity
+
+If moving the logic to model is an option then I think the following solution is among the simplest and concise ones:
+
+```ruby
+# app/controllers/books_controller.rb
+
+class BooksController < ApplicationController
+
+  def index = render locals: { user:, books: }
+
+  private
+
+    def user
+      return @_user if defined? @_user
+
+      @_user = User.find(params[:user_id])
+    end
+
+    def books
+      return @_books if defined? @_books
+
+      @_books = user.books.filter_by(author: params[:author]).page(params[:page])
+    end
+end
+
+# app/models/books
+
+class Book < ApplicationRecord
+  scope :filter_by, -> (author) { where(author: author) }
+end
+```
+
+### Conclusion
+
+The comments received show the power of code review. It is great to see many more ideas and principles that people use to refactor code and how while having the same objective (make the code maintainable and readable) we can identify different solutions.
 
 ---
 
 *Thanks to* [*Cristian Tone*](https://www.linkedin.com/in/cristiantone) *for reading various drafts of this article and giving me valuable feedback.*
+
+---
+
+Updates:
+
+1. As pointed out by pirokar13 [here](https://www.reddit.com/r/rails/comments/10f09zp/comment/j4wjwly/?context=3) I had a bug in the `then` block that returned nil, so I fixed the code. I updated the code to fix this issue
+    
+2. I added a whole new section called Alternatives where I added some proposal of code samples that I received from comments on reddit or on this blog sometimes adding my own twist :)
+    
 
 ---
 
