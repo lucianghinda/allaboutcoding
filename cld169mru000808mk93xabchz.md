@@ -1,6 +1,6 @@
 # Refactoring instance variables to local variables in Rails controllers
 
-I like to use as much as possible the new features in Ruby. In this case, I will show how to take advantage of [shorthand hash syntax](https://dev.to/baweaver/ruby-3-1-shorthand-hash-syntax-first-impressions-19op) while changing from instance variables to local variables in controllers and views.
+I like to use as much as possible the new features in Ruby. In this case, I will show how to take advantage of [shorthand hash syntax](https://dev.to/baweaver/ruby-3-1-shorthand-hash-syntax-first-impressions-19op) whileThe on changing from instance variables to local variables in controllers and views.
 
 ## Initial code
 
@@ -321,10 +321,6 @@ class BooksController < ApplicationController
 
   private
 
-    def user
-      @_user ||= User.find(params[:user_id])
-    end
-
     def get_filtered_books
       @_books ||= begin
         user_books = user.books
@@ -337,7 +333,7 @@ class BooksController < ApplicationController
 end
 ```
 
-I think this works. The only comment I have here is that it brings the need to invent these `get_<name>` or `fetch_<name>` ... so that in this specific case to remove the collision between local variable inside the method and the name of another method.
+I think this works. The only comment I have here is that it brings the need to invent these `get_<name>` or `fetch_<name>` to go eliminate the name collision with other methods or variables. So I think for example naming `get_filtered_books` to books and using short-hand syntax will remove the need to use the `get` prefix.
 
 **Option 2**
 
