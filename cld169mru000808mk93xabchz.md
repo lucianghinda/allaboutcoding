@@ -35,7 +35,7 @@ Where `.search_by_title` is defined somewhere on the model (it is not essential 
 
 ## Code review guidelines
 
-Guidelines that I follow:
+Guidelines that I will follow here:
 
 **The main purpose of an action in the controller is to render a response.**
 
