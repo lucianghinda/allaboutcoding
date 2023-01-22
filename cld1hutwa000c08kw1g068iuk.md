@@ -6,7 +6,7 @@ First: I disagree that shorthand syntax is code golfing. It makes the code short
 
 Second, in support of the short-hand syntax in my argument, my main argument is that people don't like it because they are not familiar with it. It is new thus not used that much in codebases.
 
-## A methaphor
+## A metaphor
 
 Using shorthand syntax is very similar to, for example, using `attr_accessor: var` - it means understanding something abstract because we rely on a-priory information that we take for granted in the programming language.
 
