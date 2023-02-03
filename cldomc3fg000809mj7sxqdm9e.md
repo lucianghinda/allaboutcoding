@@ -68,3 +68,14 @@ In the end, here are some starting points about linguistic relativity and lingui
 > \[...\]
 > 
 > It is more difficult to talk about, and perhaps even to think about, something that you have no frame for in your language. Cognitive scientists call this hypocognition, or lack of the ideas that you need for talking or thinking about something"
+
+---
+
+If you like this type of content, then maybe you want to consider subscribing to
+
+* my curated newsletter [**Short Ruby News**](https://newsletter.shortruby.com/) where I cover weekly Ruby news from all around the internet.
+    
+
+<iframe src="https://newsletter.shortruby.com/embed" width="800" height="320" style="border:1px solid #EEE;background:white"></iframe>
+
+* or to my personal newsletter below
