@@ -76,6 +76,6 @@ If you like this type of content, then maybe you want to consider subscribing to
 * my curated newsletter [**Short Ruby News**](https://newsletter.shortruby.com/) where I cover weekly Ruby news from all around the internet.
     
 
-<iframe src="https://newsletter.shortruby.com/embed" width="800" height="320" style="border:1px solid #EEE;background:white"></iframe>
+<iframe src="https://newsletter.shortruby.com/embed" width="800" height="320" style="border:1px solid #EEE"></iframe>
 
 * or to my personal newsletter below
