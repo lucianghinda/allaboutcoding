@@ -48,6 +48,19 @@ Here is an example:
     
 * Thus even if the reality that you want to moderate might be better expressed in some cases with `and` and `or` you will force it to fit into `&&` and `||`.
     
+Talking specifically about Ruby, there are more examples of new features or changes from Ruby 2.7+ that, for me, are changing the way I write code or at least it changes (sometimes) the way I think about code design:
+- [Pattern Matching]([](https://docs.ruby-lang.org/en/3.0/syntax/pattern_matching_rdoc.html))
+- [Numbered block params](https://rubyreferences.github.io/rubychanges/2.7.html#numbered-block-parameters)
+- [Beginless range](https://rubyreferences.github.io/rubychanges/2.7.html#beginless-range)
+- [Endless methods](https://rubyreferences.github.io/rubychanges/3.0.html#endless-method-definition)
+- [Arguments forwarding](https://rubyreferences.github.io/rubychanges/3.0.html#arguments-forwarding--supports-leading-arguments)
+- [private, public, protected returning their arguments](https://rubyreferences.github.io/rubychanges/3.1.html#moduleprivate-public-protected-and-module_function-return-their-arguments)
+- [The new Data class](https://zverok.space/blog/2023-01-03-data-initialize.html)
+- [Kernel.load adding accepting new param to evaluate code in context of a module](https://rubyreferences.github.io/rubychanges/3.1.html#kernelload-module-as-a-second-argument)
+- [Hash literal value omission](https://rubyreferences.github.io/rubychanges/3.1.html#values-in-hash-literals-and-keyword-arguments-can-be-omitted)
+- [Enumerator.product]([](https://bugs.ruby-lang.org/issues/18685))
+
+And this is not a comprehensive list of all the exciting things that are happening Ruby in the last years. 
 
 ---
 
