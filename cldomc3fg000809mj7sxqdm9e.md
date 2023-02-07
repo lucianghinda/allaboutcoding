@@ -42,14 +42,14 @@ The same goes for knowing a programming language. The more you know (and use) th
 
 Here is an example:
 
-* In Ruby - we have `&&` and `||` but we also have `and` and `or` They can be used in various contexts to express different intentions and to control the flow.
+* In Ruby - we have `&&` and `||`, but we also have `and` and `or`. They can be used in various contexts to express different intentions and to control the flow.
     
-* If you decide only to use `&&` and `||` then the way you will think about the solution (the algorithm) will then be shaped only by how `&&` and `||` behave.
+* If you decide only to use `&&` and `||`, then how you think about the solution (the algorithm) will be shaped only by how `&&` and `||` behave.
     
 * Thus even if the reality that you want to moderate might be better expressed in some cases with `and` and `or` you will force it to fit into `&&` and `||`.
     
 Talking specifically about Ruby, there are more examples of new features or changes from Ruby 2.7+ that, for me, are changing the way I write code or at least it changes (sometimes) the way I think about code design:
-- [Pattern Matching]([](https://docs.ruby-lang.org/en/3.0/syntax/pattern_matching_rdoc.html))
+- [Pattern Matching](https://docs.ruby-lang.org/en/3.0/syntax/pattern_matching_rdoc.html)
 - [Numbered block params](https://rubyreferences.github.io/rubychanges/2.7.html#numbered-block-parameters)
 - [Beginless range](https://rubyreferences.github.io/rubychanges/2.7.html#beginless-range)
 - [Endless methods](https://rubyreferences.github.io/rubychanges/3.0.html#endless-method-definition)
