@@ -103,12 +103,12 @@ def event(key) = events.find { _1.slice(:slug, :language) == key }
 
 def registration(value) = registrations.find { _1.slice(:id, :status) == value }
 
-def events(input) = @_events ||= load_events(from_event_slugs(input))
+def events(input) = @events ||= load_events(from_event_slugs(input))
 def load_events(slugs) = Event.where(slug: slugs)
 def from_event_slugs(input) = input_keys(input).collect { _1["slug"] }
 def input_keys(input) = input.flat_map { _1.keys }
 
-def registrations(input) = @_registrations ||= load_registrations(from_registration_ids(input))
+def registrations(input) = @registrations ||= load_registrations(from_registration_ids(input))
 def load_registrations(ids) = Registration.where(id: ids)
 def from_registration_ids(input) = input_values(input).collect { _1[:id] }
 def input_values(input) = input.flat_map { _1.values }.flatten
