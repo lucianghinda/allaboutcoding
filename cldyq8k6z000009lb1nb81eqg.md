@@ -91,8 +91,8 @@ You might wonder what the full code looks like (some spaces and returns were rem
 
 ```ruby
 def transform(input)
-  keys_to_event_objects(hash)
-  values_to_registration_objects(hash)
+  keys_to_event_objects(input)
+  values_to_registration_objects(input)
 end
 
 def keys_to_event_objects(hash) = hash.transform_keys! { event(_1) }
