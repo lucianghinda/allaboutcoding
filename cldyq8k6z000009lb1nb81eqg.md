@@ -10,6 +10,21 @@ I noticed this while working on various projects: once a method grows, the chanc
 
 Of course, there is a tipping point (like with the gravity of a start) that when a method is too big, it will collapse, meaning someone will take it apart and split it into smaller methods.
 
+### What is a long method and what is a short method
+
+I am not sure there exists a definition of what is a long method and what is a short method. This is of course something subjective (depending on individual or team preferences).
+
+I could say this (citing Sandi Metz): anything bigger than 5 lines of code could be considered a long method.
+
+But I think a better definition could be along the following lines:
+
+* If you need to read twice, a method to remember/understand each line of it is long.
+    
+* If you need to read it twice to understand what it does is (probably) too long (or could use some renaming)
+    
+
+Thus *a short method is one that can be understood quickly at a glance*.
+
 ### The main problems with long methods
 
 There are three main problems:
@@ -29,7 +44,7 @@ Of course, the main benefits of short methods are:
     
 2. Single Responsibility Principle: short methods are easy to focus on one single thing and thus are also easy to describe in a simple way
     
-3. Limits the number of changes: when you have to change something you can isolate the change to a small method
+3. Limits the number of changes: when you have to change something, you can isolate the change to a small method
     
 4. Easy to test: a small method is easy to test
     
@@ -59,7 +74,7 @@ def transform(input)
 end
 ```
 
-You can probably guess with a bit an effort. And I bet that letting 2 weeks pass and looking at this again you might still need a small effort to remember.
+You can probably guess with a bit an effort. And I bet that letting 2 weeks pass and looking at this again, you might still need a small effort to remember.
 
 What about the following code:
 
@@ -99,7 +114,7 @@ def from_registration_ids(input) = input_values(input).collect { _1[:id] }
 def input_values(input) = input.flat_map { _1.values }.flatten
 ```
 
-This code, with a lot of endless methods, has a huge advantage: most of the changes that you can think of would be limited to a small function.
+This code, with many endless methods, has a huge advantage: most of the changes you can think of would be limited to a small function.
 
 Example of possible changes:
 
@@ -112,7 +127,7 @@ Example of possible changes:
 * say the API will decide to return `id` for events instead of `slug` =&gt; rename `from_event_slugs`, change the key inside, and then change in `events`
     
 
-Observe that for all these changes, the main `transform` the method does not change. And that is good because the main algorithm (get hash, map keys to objects, map registration to objects) is the same.
+Observe that for all these changes, the main `transform` method does not change. And that is good because the main algorithm (get hash, map keys to objects, map registration to objects) is the same.
 
 Thus with small methods, we achieve what Sandi Metz describes as the purpose of design: *reduce the cost of change*.
 
