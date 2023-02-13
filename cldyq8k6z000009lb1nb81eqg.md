@@ -8,11 +8,11 @@ What I call **Method Gravity** means for me:
 
 I noticed this while working on various projects: once a method grows, the chances that the next developer will add more lines to it increase.
 
-Of course, there is a tipping point (like with the gravity of a start) that when a method is too big, it will collapse, meaning someone will take it apart and split it into smaller methods.
+There is a tipping point (like with the gravity of a start) when a method is too big, it will collapse, meaning someone will take it apart and split it into smaller methods.
 
-### What is a long method and what is a short method
+### What is a long method, and what is a short method?
 
-I am not sure there exists a definition of what is a long method and what is a short method. This is of course something subjective (depending on individual or team preferences).
+I am not sure there exists a definition of what is a long method and what is a short method. This is subjective (depending on individual or team preferences).
 
 I could say this (citing Sandi Metz): anything bigger than 5 lines of code could be considered a long method.
 
@@ -23,7 +23,7 @@ But I think a better definition could be along the following lines:
 * If you need to read it twice to understand what it does is (probably) too long (or could use some renaming)
     
 
-Thus *a short method is one that can be understood quickly at a glance*.
+Thus *a short method can be understood quickly at a glance*.
 
 ### The main problems with long methods
 
@@ -38,8 +38,6 @@ There are three main problems:
 
 ### Benefits of short methods
 
-Of course, the main benefits of short methods are:
-
 1. Simplicity
     
 2. Single Responsibility Principle: short methods are easy to focus on one single thing and thus are also easy to describe in a simple way
@@ -49,11 +47,11 @@ Of course, the main benefits of short methods are:
 4. Easy to test: a small method is easy to test
     
 
-But for me, the biggest benefit for the developer is that using smaller methods forces us to write better names.
+But for me, the most significant benefit for the developer is that using smaller methods forces us to write better names.
 
 Let's take an example *(please read this example as pseudo-code, I will not focus here on language specifics, and the purpose of the example is to show the high-level code design and not focus on specifics)*
 
-If you look at the following code can you say quickly what the result might be?
+If you look at the following code, can you say quickly what the result might be?
 
 ```ruby
 # input = [{ "slug" => "one_day", "language" => "en"} => [ { "id" => 10, "status" => "booked" }]]
@@ -67,10 +65,9 @@ def transform(input)
   registration_ids = registrations.collect { _1["id"] }
   registrations = Registration.where(id: registration_ids)
 
-  hash = input.pluck(*KEYS).to_h
-  hash.transform_keys! { |key| events.find { |e| e.slice(:event_type, :language) == key } }
+  input.transform_keys! { |key| events.find { |e| e.slice(:event_type, :language) == key } }
 
-  hash.transform_values { |value| registrations.find { |r| r.slice(:id, :status) == value} }
+  input.transform_values { |value| registrations.find { |r| r.slice(:id, :status) == value} }
 end
 ```
 
@@ -104,32 +101,38 @@ def event(key) = events.find { _1.slice(:slug, :language) == key }
 def registration(value) = registrations.find { _1.slice(:id, :status) == value }
 
 def events(input) = @events ||= load_events(from_event_slugs(input))
+
 def load_events(slugs) = Event.where(slug: slugs)
+
 def from_event_slugs(input) = input_keys(input).collect { _1["slug"] }
+
 def input_keys(input) = input.flat_map { _1.keys }
 
 def registrations(input) = @registrations ||= load_registrations(from_registration_ids(input))
+
 def load_registrations(ids) = Registration.where(id: ids)
+
 def from_registration_ids(input) = input_values(input).collect { _1[:id] }
+
 def input_values(input) = input.flat_map { _1.values }.flatten
 ```
 
-This code, with many endless methods, has a huge advantage: most of the changes you can think of would be limited to a small function.
+This code has a huge advantage: most of the changes you can think of would be limited to a small function. You can achieve the same result with normal methods containing one single line.
 
 Example of possible changes:
 
-* include/eager\_load on `Event` / `Registration` if more attributes will need to be used further down the road, =&gt; change the `load_*` methods
+* include/eager\_load on `Event` / `Registration` if more attributes need to be used further down the road, =&gt; change the `load_*` methods
     
-* speed up the `find_*` by ordering records in some specific way (eg: if in general, the input will have the most recent registrations/events) =&gt; just change the `load_*` methods
+* speed up the `find_*` by ordering records in some specific way (eg, if in general, the input will have the most recent registrations/events) =&gt; change the `load_*` methods
     
-* adding/removing keys from the input =&gt; just change `event` or `registration` methods
+* adding/removing keys from the input =&gt; change `event` or `registration` methods
     
-* say the API will decide to return `id` for events instead of `slug` =&gt; rename `from_event_slugs`, change the key inside, and then change in `events`
+* say the API will decide to return `id` for events instead of `slug` this is a breaking change, but still the changes in code are limited to smaller areas =&gt; rename `from_event_slugs`, change the key inside, and then change in `events`
     
 
-Observe that for all these changes, the main `transform` method does not change. And that is good because the main algorithm (get hash, map keys to objects, map registration to objects) is the same.
+For all these changes, the `transform` method does **not** change. This is good because the main algorithm (get hash, map keys to objects, map registration to objects) remains the same.
 
-Thus with small methods, we achieve what Sandi Metz describes as the purpose of design: *reduce the cost of change*.
+With small methods, we achieve what Sandi Metz describes as the purpose of design: *reduce the cost of change*.
 
 ### Ideas to keep methods small
 
@@ -192,7 +195,7 @@ In general, I like the advice from a [paper published by Google](https://static.
 
 So the main idea, if you want to keep the methods small, is to make it hard for you or a colleague to make them bigger in the future. Add a bit of antigravitational force to them.
 
-Observe in the main example (the one with `transform` method) that it is a bit hard to make the other methods longer. You can rename them and you can change what each of them is doing with ease. But adding more lines of code to each one of them is hard.
+The same happens in the example I showed above: using endless methods is a bit hard to add one more line to them. You can still rename them and easily change what each of them is doing.
 
 ### In case you like this recommendation from Sandi Metz:
 
@@ -213,7 +216,11 @@ Even Sandi Metz [says](https://www.rubypigeon.com/posts/methods-can-be-longer-th
 > There are actually six rules, and the sixth rule is that you can break any of the first five, as long as you can get your pair to agree. Why is it that we’re such cargo culters about it? It’s like, that’s the rule that people forget.
 
 ---
+### Updates
+1. I removed `hash = input.pluck(:KEYS).to_h` from the initial method and directly called transform_* methods on `input`. Reason: it does not add any information that is useful for the purpose of the article
 
-If you like this type of content, then maybe you want to consider subscribing to my curated newsletter [**Short Ruby News**](https://newsletter.shortruby.com/) where I cover weekly Ruby news from all around the internet.
+---
+
+If you like this type of content, you may want to consider subscribing to my curated newsletter [Short Ruby News](https://newsletter.shortruby.com) where I cover weekly Ruby news from around the internet.
 
 %%[shortruby]
