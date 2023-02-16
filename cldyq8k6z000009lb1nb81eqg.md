@@ -219,6 +219,7 @@ Even Sandi Metz [says](https://www.rubypigeon.com/posts/methods-can-be-longer-th
 ### Updates
 1. I removed `hash = input.pluck(:KEYS).to_h` from the initial method and directly called transform_* methods on `input`. Reason: it does not add any information that is useful for the purpose of the article
 
+2. There are some good comments in this [Reddit thread](https://www.reddit.com/r/ruby/comments/10yx6wz/a_methods_gravity/) and I am planning to update the examples in this article. The comments and alternative solutions proposed there at about the code example. But the main idea of my article I think remains the same: a long method will attract more code. 
 ---
 
 If you like this type of content, you may want to consider subscribing to my curated newsletter [Short Ruby News](https://newsletter.shortruby.com) where I cover weekly Ruby news from around the internet.
