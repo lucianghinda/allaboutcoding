@@ -66,3 +66,8 @@ If you don't have a blog, then write a public gist and add it to Github.
 In case you cannot do any of the above just share it via social media.
 
 It will of course be great if you can combine all: write a blog post and then share it via social media.
+
+---
+Enjoyed this article? 
+
+Join my **[Short Ruby News](https://shortruby.com) newsletter** for weekly Ruby updates. Also, check out my co-authored **book**, **[LintingRuby](https://lintingruby.com)**, for insights on automated code checks. For more Ruby **learning resources**, visit **[rubyandrails.info](https://rubyandrails.info)**.
