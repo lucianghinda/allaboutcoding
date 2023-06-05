@@ -21,10 +21,10 @@ Another way is to use YARD structure to write before a class or method directly:
 
 ```ruby
 # @example How to make this use case work
-#    ```
+#    
 #    t = http://MyObect.new(...)
 #    t.run(email_param: "test")
-#    ```
+#    
 ```
 
 Try to write an example that, when copied/pasted to `irb` or `rails console` will work.
