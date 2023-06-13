@@ -3,6 +3,7 @@ title: "This week focus: Refactoring"
 datePublished: Tue Jun 13 2023 08:04:18 GMT+0000 (Coordinated Universal Time)
 cuid: clitzytcf000909mo64aw8xwg
 slug: this-week-focus-refactoring
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1686646472094/1b926af4-98d3-40ca-bb91-64e3faf16e17.png
 tags: refactoring, programming-blogs, ruby, ruby-on-rails, programming-tips
 
 ---
@@ -33,3 +34,9 @@ For inspiration, take a look at these eloquent words from Yukihiro Matz (from Be
     
 
 Of course if you have more time then there are other strategies to approach refactoring. But in case you don't have too much dedicated time, let's focus this week in doing some bit and pieces of refactoring.
+
+---
+
+Enjoyed this article?
+
+Join my [**Short Ruby News**](https://shortruby.com/) **newsletter** for weekly Ruby updates. Also, check out my co-authored **book**, [**LintingRuby**](https://lintingruby.com/), for insights on automated code checks. For more Ruby **learning resources**, visit [**rubyandrails.info**](http://rubyandrails.info)**.**
