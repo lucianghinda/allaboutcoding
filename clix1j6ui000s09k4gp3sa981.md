@@ -1,8 +1,8 @@
 ---
-title: "A simple idea how to grow Ruby community"
+title: "A simple idea of how to grow the Ruby community"
 datePublished: Thu Jun 15 2023 11:11:26 GMT+0000 (Coordinated Universal Time)
 cuid: clix1j6ui000s09k4gp3sa981
-slug: a-simple-idea-how-to-grow-ruby-community
+slug: a-simple-idea-of-how-to-grow-the-ruby-community
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1686827202511/d4b25070-61ba-4f15-8dcc-b02a87a967a1.jpeg
 tags: blogging, ruby, ruby-on-rails, advice
 
@@ -36,8 +36,7 @@ Here are some more ideas:
     
 * Write about how you are writing Ruby code, what is important for you and what you like about Ruby
     
-
-I assure you, YOU have something to write about. Even if other people wrote about the same topic, you must write your article.
+I assure you, YOU have something to write about. Even if other people wrote about the same topic, you must write your own article in your own style. This will add value to the conversation about that specific topic by providing your point of view or writing style.
 
 In general, I recommend you read this blog post by Julia Evans -&gt; [Some Blogging Myths](https://jvns.ca/blog/2023/06/05/some-blogging-myths)
 
