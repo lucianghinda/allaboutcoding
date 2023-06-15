@@ -8,7 +8,7 @@ tags: blogging, ruby, ruby-on-rails, advice
 
 ---
 
-As a followup from my article yesterday about [Why write technical content on a blog and not only on social media](https://allaboutcoding.ghinda.com/why-write-technical-content-on-a-blog-and-not-only-on-social-media) here is what I think in the medium term will help bring more people to Ruby:
+As a followup from my article yesterday about [Why write technical content on a blog and not only on social media](https://allaboutcoding.ghinda.com/why-write-technical-content-on-a-blog-and-not-only-on-social-media) about how I think we can grow the Ruby community:
 
 **Write more technical content about Ruby.**
 
