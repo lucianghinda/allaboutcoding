@@ -46,3 +46,9 @@ In general, I recommend you read this blog post by Julia Evans -&gt; [Some Blogg
 You will say that what's the point of writing such articles now that we have LLMs and maybe people will go to ChatGPT for learning Ruby.
 
 If we don't write fresh content then the next generation of LLMs will be trained on less Ruby content and so it might be less fit to answer questions about Ruby in the future.
+
+---
+
+Enjoyed this article?
+
+Join my [**Short Ruby News**](https://shortruby.com/) **newsletter** for weekly Ruby updates. Also, check out my co-authored **book**, [**LintingRuby**](https://lintingruby.com/), for insights on automated code checks. For more Ruby **learning resources**, visit [**rubyandrails.info**](http://rubyandrails.info)**.**
