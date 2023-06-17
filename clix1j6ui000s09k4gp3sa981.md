@@ -14,13 +14,13 @@ As a followup from my article yesterday about [Why write technical content on a 
 
 ## Why will this help?
 
-First, more content means more reach and thus will offer the chance for more people to find out about Ruby and how we solve problems with Ruby.
+First, more content means more reach and thus will offer more people the chance to learn about Ruby and how we solve problems with Ruby.
 
 Second, it will contribute to having more learning resources. And as more people will write, more diverse writing styles will be and thus better chances for someone to find something that fits their learning style.
 
 Third, will increase the business/tech leads exposure to Ruby and solutions created in Ruby.
 
-In the long publishing continuously
+On the long term, publishing continuously will have a compound effect on growing our Ruby community. 
 
 ## What to write about?
 
