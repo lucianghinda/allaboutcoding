@@ -294,3 +294,10 @@ If you want to read more about this and see other examples here are some good re
 * [Is Ruby pass-by-reference or pass-by-value?](https://robertheaton.com/2014/07/22/is-ruby-pass-by-reference-or-pass-by-value/) ([Internet Archive](https://web.archive.org/web/20230129220622/https://robertheaton.com/2014/07/22/is-ruby-pass-by-reference-or-pass-by-value/) version)
     
 * [Ruby: pass by value or pass by reference](http://rubyblog.pro/2017/09/pass-by-value-or-pass-by-reference) ([Internet Archive](https://web.archive.org/web/20230325023052/http://rubyblog.pro/2017/09/pass-by-value-or-pass-by-reference) version)
+    
+
+---
+
+Enjoyed this article?
+
+Join my [**Short Ruby News**](https://shortruby.com/) **newsletter** for weekly Ruby updates. Also, check out my co-authored **book**, [**LintingRuby**](https://lintingruby.com/), for insights on automated code checks. For more Ruby **learning resources**, visit [**rubyandrails.info**](http://rubyandrails.info)**.**
