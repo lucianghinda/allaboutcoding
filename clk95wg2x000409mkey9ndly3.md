@@ -26,11 +26,13 @@ Here are some places where I would submit an article:
     
 * [news.ycombinator.com](https://news.ycombinator.com) - here you can submit your article by going to [Submit](https://news.ycombinator.com/submit)
     
+* [lobste.rs](https://lobste.rs) - here you can submit your article but you will need an invite to create your account
+    
+* [RubyWeekly](https://rubyweekly.com) - while there is no official way to submit an article for RubyWeekly it is worth trying to suggest your article there as it has the largest audience. One way would be to subscribe to the newsletter and then reply to an issue with your proposal.
+    
 * [RubyRadar](https://www.rubyradar.com) - you can submit your article to be included in the Ruby Radar newsletter by creating a discussion [on their Github repo](https://github.com/therubyradar/submissions/discussions/new/choose)
     
 * [Short Ruby Newsletter](https://newsletter.shortruby.com) - you can submit your article as an issue to this [Github Repo](https://github.com/ShortRuby/submit)
-    
-* [RubyWeekly](https://rubyweekly.com) - while there is no official way to submit an article for RubyWeekly it is worth trying to suggest your article there as it has the largest audience. One way would be to subscribe to the newsletter and then reply to an issue with your proposal.
     
 
 In almost all cases for these websites, you will have to create an account or authenticate via Github.
