@@ -34,6 +34,8 @@ Here are some places where I would submit an article:
     
 * [Short Ruby Newsletter](https://newsletter.shortruby.com) - you can submit your article as an issue to this [Github Repo](https://github.com/ShortRuby/submit)
     
+* [Hotwire Dev Newsletter](https://masilotti.com/hotwire/) - if you write anything related to Hotwire you should send it to [Joe Masilotti](https://masilotti.com/about/)
+    
 
 In almost all cases for these websites, you will have to create an account or authenticate via Github.
 
