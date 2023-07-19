@@ -37,9 +37,9 @@ In almost all cases for these websites, you will have to create an account or au
 
 There are two places where I recommend you should republish your article:
 
-* [Dev.to](https://dev.to) community
+* [Dev.to](https://dev.to) community. They are a great and supportive community for developers and there is even a weekly Rubyist Hangout Thread
     
-* [Hashnode](https://hashnode.com) - another quite active community
+* [Hashnode](https://hashnode.com) - another quite active community of fellow developers
     
 
 How this works:
@@ -73,7 +73,7 @@ This is I think the biggest group on Linkedin for Ruby and Rails developers. The
 
 This is a group that is not specific to Ruby but there is a Ruby audience there and the group accepts submissions for technical articles.
 
-[Reddit /r/ruby](https://www.linkedin.com/groups/62218/)
+[Reddit /r/ruby](https://www.reddit.com/r/ruby/)
 
 An active community of Ruby developers on Reddit. They are engaging with your articles and will usually reply with direct feedback.
 
