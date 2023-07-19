@@ -1,5 +1,7 @@
 ---
 title: "A simple idea of how to grow the Ruby community"
+seoTitle: "How to grow Ruby community with a simple idea"
+seoDescription: "Grow Ruby community with diverse content, shared experiences, and coding styles. Creating additional technical material aids in expanding the Ruby community"
 datePublished: Thu Jun 15 2023 11:11:26 GMT+0000 (Coordinated Universal Time)
 cuid: clix1j6ui000s09k4gp3sa981
 slug: a-simple-idea-of-how-to-grow-the-ruby-community
