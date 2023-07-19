@@ -30,6 +30,8 @@ Here are some places where I would submit an article:
     
 * [Short Ruby Newsletter](https://newsletter.shortruby.com) - you can submit your article as an issue to this [Github Repo](https://github.com/ShortRuby/submit)
     
+* [RubyWeekly](https://rubyweekly.com) - while there is no official way to submit an article for RubyWeekly it is worth trying to suggest your article there as it has the largest audience. One way would be to subscribe to the newsletter and then reply to an issue with your proposal.
+    
 
 In almost all cases for these websites, you will have to create an account or authenticate via Github.
 
