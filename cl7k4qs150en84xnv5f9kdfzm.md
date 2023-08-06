@@ -1,4 +1,11 @@
-## How to learn Ruby
+---
+title: "How to learn Ruby"
+datePublished: Fri Sep 02 2022 07:03:33 GMT+0000 (Coordinated Universal Time)
+cuid: cl7k4qs150en84xnv5f9kdfzm
+slug: how-to-learn-ruby
+tags: ruby, learning, coding, programming-tips
+
+---
 
 I think learning Ruby has three parts:
 1. OOP + SOLID in Ruby
