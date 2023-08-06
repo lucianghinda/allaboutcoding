@@ -1,4 +1,11 @@
-## What to work on when learning a new language
+---
+title: "What to work on when learning a new language"
+datePublished: Tue Apr 26 2022 04:07:59 GMT+0000 (Coordinated Universal Time)
+cuid: cl2fmo43p01e4y8nvc123g7i0
+slug: what-to-work-on-when-learning-a-new-language
+tags: learning, side-project, programming-tips, learn-coding, learning-journey
+
+---
 
 If you just started to learn a programming language and web framework, here is my suggestion about what to work on: 
 
