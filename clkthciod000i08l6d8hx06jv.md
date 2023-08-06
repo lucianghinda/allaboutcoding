@@ -6,7 +6,7 @@ datePublished: Wed Aug 02 2023 08:42:29 GMT+0000 (Coordinated Universal Time)
 cuid: clkthciod000i08l6d8hx06jv
 slug: projects-ideas-for-learning-ruby-or-any-ruby-web-framework
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1690965437292/f42d0c24-14fe-4282-8299-3a60cc1926c0.png
-tags: ruby-on-rails, learning, reactjs
+tags: ruby, ruby-on-rails, learning, learn-coding
 
 ---
 
