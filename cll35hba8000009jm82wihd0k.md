@@ -12,7 +12,7 @@ tags: ruby, rails, ruby-on-rails, developer, learning-journey
 
 ## About the Most popular technology section
 
-*Numbers:*
+*Numbers (*[source](https://survey.stackoverflow.co/2023/#technology-most-popular-technologies)):
 
 * All respondents: in 2023 Ruby has 6.23% while in 2022 had 6.05%. It also **moved up** a spot in 2023
     
@@ -32,7 +32,7 @@ tags: ruby, rails, ruby-on-rails, developer, learning-journey
 
 ### Top paying technologies
 
-*Numbers:*
+*Numbers (*[*source*](https://survey.stackoverflow.co/2023/#technology-top-paying-technologies)*):*
 
 Ruby is this year (2023) in 4th position from the top, with an average of **$98.552**, moving up from last year (2022) when it was in the fifth position with *$93.000*
 
@@ -62,7 +62,7 @@ I think there are already projects in the community (both new and old) that are 
 
 As others have pointed out in various discussions this year, **we need to invest more effort in welcoming new people to the ecosystem**. This means creating more content for beginners, more jobs and at-work learning experiences for beginners, and providing learning materials and books for those just starting. A broader range of perspectives and voices will help attract a larger audience.
 
-In today's rapidly evolving online content, we should also try to find ways to encourage beginners to share their experiences and write tutorials to teach others. We should want to put Ruby on the beginners radar and talk about why they should pick Ruby as programming language and then provide learning support.
+In today's rapidly evolving online content, we should also try to find ways to encourage beginners to share their experiences and write tutorials to teach others. We should want to put Ruby on the beginner's radar and talk about why they should pick Ruby as a programming language and then provide learning support.
 
 ---
 
