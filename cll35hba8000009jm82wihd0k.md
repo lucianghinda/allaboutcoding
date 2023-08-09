@@ -63,3 +63,9 @@ I think there are already projects in the community (both new and old) that are 
 As others have pointed out in various discussions this year, **we need to invest more effort in welcoming new people to the ecosystem**. This means creating more content for beginners, more jobs and at-work learning experiences for beginners, and providing learning materials and books for those just starting. A broader range of perspectives and voices will help attract a larger audience.
 
 In today's rapidly evolving online content, we should also try to find ways to encourage beginners to share their experiences and write tutorials to teach others. We should want to put Ruby on the beginners radar and talk about why they should pick Ruby as programming language and then provide learning support.
+
+---
+
+Enjoyed this article?
+
+Join my [**Short Ruby News**](https://shortruby.com/) **newsletter** for weekly Ruby updates. For more Ruby **learning resources**, visit [**rubyandrails.info**](http://rubyandrails.info)
