@@ -63,3 +63,10 @@ And based on the paper here are the categories of causes for errors or bugs:
 3. To become a better developer one has to learn more than coding/engineering techniques.
     
 4. When we think about a possible future of using AI to augment programming, we should consider that if this study remains true it is not enough to reduce the number of errors. As half of them are not caused by code.
+    
+
+---
+
+Enjoyed this article?
+
+Join my [**Short Ruby News**](https://shortruby.com/) **newsletter** for weekly Ruby updates. For more Ruby **learning resources**, visit [**rubyandrails.info**](http://rubyandrails.info)
