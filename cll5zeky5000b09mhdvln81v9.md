@@ -40,15 +40,15 @@ If we want to reduce the number of errors then we should focus not only on bette
 
 And based on the paper here are the categories of causes for errors or bugs:
 
-1\. Technological
+1\. Technological = *"definability of the problem, feasibility of solving it, available procedures and tools"*
 
-2\. Organisational
+2\. Organisational = *"division of work load, available in- formation, communication, resources"*
 
-3\. Historic
+3\. Historic = *"history of the project, of the program, special situations, and external influences"*
 
-4\. Group dynamic
+4\. Group dynamic = *"willingness to cooperate, distribution of roles inside the project group"*
 
-5\. Individual
+5\. Individual = *"experience, talent, and constitution of the individual programmer"*
 
 6\. Other
 
