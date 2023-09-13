@@ -54,6 +54,8 @@ I then had a page with 3 columns (or cells) each one having a different height b
 
 Here I tried again to be as descriptive as possible without giving into what solution I am looking for.
 
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1694609993063/4f5d8783-00e8-4980-bcb3-15e906ab4aca.png align="center")
+
 I received a response that uses `flex-grow` to achieve this result. It worked, but in the end, I needed to edit more. After seeing the result I also added height to the title of the column.
 
 ## Replacing a `div` with `a`
