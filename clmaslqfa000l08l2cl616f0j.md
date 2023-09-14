@@ -54,11 +54,14 @@ Here is the response:
 
 ![Response from Cursor chat](https://cdn.hashnode.com/res/hashnode/image/upload/v1694057733418/5afc1558-facf-4d22-a9f9-3e4ed2f90b7c.png align="center")
 
-What I notice in the response is that indeed [`h`](https://api.rubyonrails.org/classes/ERB/Util.html#method-c-h) is an alias for `html_escape` and that the proposed change makes sense.
+What I notice in the response is that indeed [`h`](https://api.rubyonrails.org/classes/ERB/Util.html#method-c-h) is an alias for `html_escape` but the response is a bit outdated. Since [Rails 3.0](https://guides.rubyonrails.org/3_0_release_notes.html#other-changes) there is no need to escape with `h` because:
 
-What's important to notice is that when writing this prompt I already knew that something was wrong with the code and had an idea about what the fix will be.
+> * You no longer need to call `h(string)` to escape HTML output, it is on by default in all view templates. If you want the unescaped string, call `raw(string)`.
+>     
 
-Thus I asked a follow-up question:
+The response, although it won't break anything, is also unnecessary. Furthermore, since this information is from Rails 3.0, GPT-4 should already be aware of it.
+
+I followed up with this question:
 
 ```markdown
 In this context is `html_escape` or `h` enough to mitigate 
@@ -70,11 +73,13 @@ Here is the response:
 
 ![GPT4 response about using html_escape](https://cdn.hashnode.com/res/hashnode/image/upload/v1694060388888/a14db7f7-37d9-4b8f-9a97-77452e1e822f.png align="center")
 
-I was happy with the response and then moved on to finish my implementation.
+As I mentioned the response is logical, but in this specific case for rendering the user input in the view via `<%= %>` it is not needed to call `h` as it is already escaped by default.
+
+I still decided to extract into a component the display of the search and thus have it ready for further UI improvements across all pages.
 
 You can see the PRs that I implemented with the cursor at:
 
-* [Add seach component to all other pages](https://github.com/ShortRuby/rubyandrails.info/pull/105)
+* [Add search component to all other pages](https://github.com/ShortRuby/rubyandrails.info/pull/105)
     
 * [Refactor Search Term Display into a Reusable Component](https://github.com/ShortRuby/rubyandrails.info/pull/107/files)
     
@@ -86,6 +91,10 @@ I used very simple prompts. Almost no context was given except for the ruby file
 I already had a good idea of what to look for thus, it was easy to know when a result was what I expected and when it was not
 
 The changes that I made were small thus, it was easy to assess the code.
+
+## Update
+
+In a previous version of this article, I was evaluating the response from GPT-4 which recommends using `h` to escape the HTML output when using in ERB as correct. [Xavier Noria](https://hashref.com) pointed out that it is not needed to use `h` as Rails ERB `<%=` is escaping HTML output by default. I confirmed this by testing and also found the [changelog that mentions this since Rails 3.0](https://guides.rubyonrails.org/3_0_release_notes.html#other-changes).
 
 ---
 
