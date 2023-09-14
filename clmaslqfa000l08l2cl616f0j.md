@@ -88,9 +88,11 @@ You can see the PRs that I implemented with the cursor at:
 
 I used very simple prompts. Almost no context was given except for the ruby files or code itself. Nor did I ask for some proper follow-ups to nudge it in the desired direction. There was also no instruction about what a good code looks like for me.
 
-I already had a good idea of what to look for thus, it was easy to know when a result was what I expected and when it was not
+I already had a good idea of what to look for. Thus, it was easy to know when a result was what I expected and when it was not.
 
-The changes that I made were small thus, it was easy to assess the code.
+The changes I made were small. Thus, it was easy to assess the code.
+
+One challenging task is to determine if a response is up-to-date, as demonstrated by the interaction about escaping the parameter.
 
 ## Update
 
