@@ -94,7 +94,7 @@ The changes that I made were small thus, it was easy to assess the code.
 
 ## Update
 
-1. In a previous version of this article, I was evaluating the response from GPT-4 which recommends using `h` to escape the HTML output when using in ERB as correct. [Xavier Noria](https://hashref.com) pointed out that it is not needed to use `h` as Rails ERB `<%=` is escaping HTML output by default. I confirmed this by testing and also found the [changelog that mentions this since Rails 3.0](https://guides.rubyonrails.org/3_0_release_notes.html#other-changes).
+1. In a previous version of this article, I was evaluating the response from GPT-4 which recommends using `h` to escape the HTML output when using in ERB as good enough. [Xavier Noria](https://hashref.com) pointed out that it is not needed to use `h` as Rails ERB `<%=` is escaping HTML output by default. I confirmed this by testing and also found the [changelog that mentions this since Rails 3.0](https://guides.rubyonrails.org/3_0_release_notes.html#other-changes).
     
 
 ---
