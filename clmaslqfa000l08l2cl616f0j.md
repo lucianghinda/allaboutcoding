@@ -34,7 +34,7 @@ What I would like (and maybe Cursor knows this but I am just starting to use it)
 
 ## A small security PR
 
-Next, I moved from the Edit with LLM functionality to Chat with LLM functionality that Cursor IDE offers.
+Next, I moved from the Edit with LLM functionality to the Chat with LLM functionality that Cursor IDE offers.
 
 Looking at the source code I noticed the following code, which I think it is a security risk.
 
@@ -59,7 +59,9 @@ What I notice in the response is that indeed [`h`](https://api.rubyonrails.org/c
 > * You no longer need to call `h(string)` to escape HTML output, it is on by default in all view templates. If you want the unescaped string, call `raw(string)`.
 >     
 
-The response, although it won't break anything, is also unnecessary. Furthermore, since this information is from Rails 3.0, GPT-4 should already be aware of it.
+The response, although it won't break anything, is also unnecessary and moreso it is incorrect. It is incorrect because until a vulnerability - if any - is found in the escape Rails does, the code should be considered safe. If we don't do this then we cannot work with abstractions or trust a framework.
+
+Furthermore, since this information is from Rails 3.0, GPT-4 should already be aware of it.
 
 I followed up with this question:
 
@@ -73,11 +75,11 @@ Here is the response:
 
 ![GPT4 response about using html_escape](https://cdn.hashnode.com/res/hashnode/image/upload/v1694060388888/a14db7f7-37d9-4b8f-9a97-77452e1e822f.png align="center")
 
-As I mentioned the response is logical, but in this specific case for rendering the user input in the view via `<%= %>` it is not needed to call `h` as it is already escaped by default.
+Also, the response here is a bit out of place. We are in the context of an ERB file where the code is just printing a variable. There is no SQL query executed. Again while the response sounds logical apparently it is unhelpful. It also shows that once the GPT gets into a direction it hardly self-corrects itself unless instructed to do so.
 
 I still decided to extract into a component the display of the search and thus have it ready for further UI improvements across all pages.
 
-You can see the PRs that I implemented with the cursor at:
+You can see the PRs that I implemented with the Cursor IDE at:
 
 * [Add search component to all other pages](https://github.com/ShortRuby/rubyandrails.info/pull/105)
     
@@ -94,9 +96,13 @@ The changes I made were small. Thus, it was easy to assess the code.
 
 One challenging task is to determine if a response is up-to-date, as demonstrated by the interaction about escaping the parameter.
 
+Another challenging task is to be able to detect a response that sounds logical, but is out of context and thus would be wrong to be applied in that specific situation.
+
 ## Update
 
 1. In a previous version of this article, I was evaluating the response from GPT-4 which recommends using `h` to escape the HTML output when using in ERB as good enough. [Xavier Noria](https://hashref.com) pointed out that it is not needed to use `h` as Rails ERB `<%=` is escaping HTML output by default. I confirmed this by testing and also found the [changelog that mentions this since Rails 3.0](https://guides.rubyonrails.org/3_0_release_notes.html#other-changes).
+    
+2. After a second review from [Xavier](https://hashref.com) and following a discussion we had I am reconsidering my evaluation of the response about XSS vulnerability from unnecessary to incorrect. Until proven otherwise (by someone else finding a bug in the html\_escape) the escape provided by Rails should be considered safe and this should be the correct response from LLM.
     
 
 ---
