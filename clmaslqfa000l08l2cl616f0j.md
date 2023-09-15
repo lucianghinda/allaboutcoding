@@ -54,12 +54,12 @@ Here is the response:
 
 ![Response from Cursor chat](https://cdn.hashnode.com/res/hashnode/image/upload/v1694057733418/5afc1558-facf-4d22-a9f9-3e4ed2f90b7c.png align="center")
 
-What I notice in the response is that indeed [`h`](https://api.rubyonrails.org/classes/ERB/Util.html#method-c-h) is an alias for `html_escape` but the response is a bit outdated. Since [Rails 3.0](https://guides.rubyonrails.org/3_0_release_notes.html#other-changes) there is no need to escape with `h` because:
+What I notice in the response is that indeed [`h`](https://api.rubyonrails.org/classes/ERB/Util.html#method-c-h) is an alias for `html_escape` but the response is a bit outdated, thus incorrect. Since [Rails 3.0](https://guides.rubyonrails.org/3_0_release_notes.html#other-changes) there is no need to escape with `h` because:
 
 > * You no longer need to call `h(string)` to escape HTML output, it is on by default in all view templates. If you want the unescaped string, call `raw(string)`.
 >     
 
-The response, although it won't break anything, is also unnecessary and moreso it is incorrect. It is incorrect because until a vulnerability - if any - is found in the escape Rails does, the code should be considered safe. If we don't do this then we cannot work with abstractions or trust a framework.
+The response, although it won't break anything, is also unnecessary and should not be followed. It is incorrect because until a vulnerability - if any - is found in the escape Rails does, the code should be considered safe. If we don't do this then we cannot work with abstractions or trust a framework.
 
 Furthermore, since this information is from Rails 3.0, GPT-4 should already be aware of it.
 
