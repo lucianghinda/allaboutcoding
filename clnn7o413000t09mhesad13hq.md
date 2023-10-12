@@ -41,3 +41,9 @@ They use at the date of writing this article:
 ## Conclusion
 
 Ruby on Rails does scale!
+
+---
+
+Enjoyed this article?
+
+Join my [**Short Ruby News**](https://shortruby.com/) **newsletter** for weekly Ruby updates from the community. For more Ruby **learning resources**, visit [**rubyandrails.info**](http://rubyandrails.info)**. You can also find me** [**on Ruby.social**](http://onRuby.social) **or** [**Linkedin**](https://linkedin.com/in/lucianghinda)
