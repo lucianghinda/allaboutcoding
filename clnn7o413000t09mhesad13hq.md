@@ -38,6 +38,8 @@ They use at the date of writing this article:
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1697116217073/5ddb979d-dd24-4882-98fb-9629a5d60b68.png align="center")
 
+Source: their [open-source Github repo](https://github.com/otwcode/otwarchive)
+
 ## Conclusion
 
 Ruby on Rails does scale!
