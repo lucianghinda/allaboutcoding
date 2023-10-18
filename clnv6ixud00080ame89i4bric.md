@@ -231,17 +231,15 @@ class SimpleObject
   end
 end
 
-puts "Are you defining `my_method`? #{SimpleObject.method_defined?(:my_method)}"
-puts "Do you have this method? #{Object.private_methods.include?(:my_method)}"
-puts "Are you defining `my_method`? #{Object.method_defined?(:my_method)}"
+puts "Are you defining `my_method`? #{SimpleObject.private_method_defined?(:my_method)}"
+uts "Do you have this method? #{Object.private_methods.include?(:my_method)}"
 
 # => 
-Are you defining `my_method`? false
+Are you defining `my_method`? true
 Do you have this method? true
-Are you defining `my_method`? false
 ```
 
-So Object has `my_method` but it is not defining it. That is true. It is added while executing this file.
+This is a method that was added to the `Object` and `Object` is defining this method as a private method.
 
 We can test this by using [`Object#method_added`](https://docs.ruby-lang.org/en/3.2/Module.html#method-i-method_added)
 
@@ -259,6 +257,8 @@ end
 # => 
 I just added :my_method on Object
 ```
+
+**CLUE D - FOUND** The method is *defined* on `Object` but as a private method. That's why it is accessible everywhere, but that is also why if you add this kind of methods, you would be polluting every object with extra private methods if you define top-level methods like that or you might redefine already existing methods.
 
 ## Conclusion
 
@@ -308,6 +308,11 @@ Where is `to_s` defined? ["side_effects.rb", 12]
 ```
 
 Notice that `to_s` from SecondSimpleObject has now the value `THIS IS NOT MAIN` and it is reported to be defined in `side_effects.rb` file?
+
+## Updates
+
+* [Ufuk Kayserilioglu](https://ufuk.dev) gave me [valuable feedback](https://ruby.social/@ufuk/111256244982093392) on an earlier version of this article that I incorrectly used `method_defined?` instead of `private_method_defined?` in the section about if method was added or defined. Thus I refactored that section and now it states clearly that `my_method` is defined as a private method on the `Object`
+    
 
 ---
 
