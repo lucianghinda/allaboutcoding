@@ -217,7 +217,7 @@ Indeed it works! I now confirmed in two ways that `my_method` is indeed created 
 
 ### Four: Is `my_method` defined in Object or added to Object?
 
-Just to push things more, let's try to find out what kind of mechanism is used to add this method inside the `Object` (well from how I formulated this you probably can guess):
+Just to push things more, let's try to find out what kind of mechanism is used to add this method to the `Object` (well from how I formulated this you probably can guess):
 
 ```ruby
 
@@ -258,7 +258,76 @@ end
 I just added :my_method on Object
 ```
 
-**CLUE D - FOUND** The method is *defined* on `Object` but as a private method. That's why it is accessible everywhere, but that is also why if you add this kind of methods, you would be polluting every object with extra private methods if you define top-level methods like that or you might redefine already existing methods.
+**CLUE D - FOUND** The method is *defined* on `Object` but as a private method. That's why it is accessible everywhere, but that is also why if you add this kind of method, you would be polluting every object with extra private methods if you define top-level methods like that or you might redefine already existing methods.
+
+### Five: Is `my_method` part of BasicObject
+
+In the beginning, I asked this question inside the `exploration.rb` file:
+
+```ruby
+puts "What are your ancestors: #{self.class.ancestors}"
+
+# => What are your ancestors: [Object, Kernel, BasicObject]
+```
+
+I think it is worth investigating a bit what happens with `BasicObject` and `Kernel`.
+
+**Question 1: Does** `BasicObject` **include** `my_method`**?**
+
+```ruby
+def my_method
+	puts "Who is here: #{self} with object_id #{self.object_id}"
+end
+
+class AVeryBasicObject < BasicObject
+  def look_for_my_method
+    my_method
+  end
+end
+
+begin
+  AVeryBasicObject.new.look_for_my_method
+rescue NameError => _
+  puts "`my_method` is not here"
+end
+
+# => `my_method` is not here
+```
+
+`BasicObject` does not include `my_method`
+
+**Question 2: Does** `Kernel` **module include** `my_method`**?**
+
+First I will include `Kernel` and test to make sure it is included properly by testing that the newly created object has `puts`
+
+```ruby
+class AnObjectWithKernel < BasicObject
+  include ::Kernel
+
+  def a_method
+    puts "Inside AnObjectWithKernel - it now includes puts"
+  end
+
+  def look_for_my_method
+    my_method
+  end
+end
+
+obj = AnObjectWithKernel.new
+
+obj.a_method
+# => Inside AnObjectWithKernel - it now includes puts
+
+begin
+  obj.look_for_my_method
+rescue NameError => _
+  puts "`my_method` is not here"
+end
+
+# => `my_method` is not here
+```
+
+`Kernel` does not include `my_method`
 
 ## Conclusion
 
