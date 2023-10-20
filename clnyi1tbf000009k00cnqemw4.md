@@ -5,12 +5,12 @@ seoDescription: "Compare ChatGPT & Github Copilot's methods for creating custom 
 datePublished: Fri Oct 20 2023 11:00:07 GMT+0000 (Coordinated Universal Time)
 cuid: clnyi1tbf000009k00cnqemw4
 slug: using-chatgpt-and-github-copilot-to-generate-tailwind-config-for-width-classes
-cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1697799341761/ac87ba6a-28f3-4fd6-a398-81d63908c07c.png
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1697801455326/e065a4e3-a08d-4097-9299-8f4b89de16e5.png
 tags: ai, ruby, ruby-on-rails, tailwind-css, chatgpt
 
 ---
 
-In this article, I will show how I used ChatGPT and Github Copilot to generate a custom Tailwind config for width classes up to 800px for desktop resolution.
+In this article, I will show how I used ChatGPT, Github Copilot and Phind to generate a custom Tailwind config for width classes up to 800px for desktop resolution.
 
 These language models can serve as helpful conversation partners, providing different solutions to the same problem.
 
@@ -61,6 +61,16 @@ And it replied with the following:
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1697734476571/133df7c4-652b-40d4-8c12-f6d35166614d.png align="center")
 
 It seems that it was not aware that Tailwind already has width classes up until 384px. But it did apply with an approximation of the golden ratio when spacing the width classes.
+
+## Phind
+
+I asked [Phind](https://www.phind.com) the same question and here is the answer:
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1697801297781/4c884fb9-62bc-4655-87b5-673d1eccccc0.png align="center")
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1697801327316/722b2e88-d14f-42e6-bff8-7e728a9884f3.png align="center")
+
+I find the Phind answer better. It explains how it did the calculation, it used the golden ratio for each step and it also provides the Tailwind config and shows how to use it.
 
 ---
 
