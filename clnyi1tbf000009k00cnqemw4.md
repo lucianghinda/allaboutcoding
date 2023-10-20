@@ -1,10 +1,10 @@
 ---
-title: "Using ChatGPT and Github Copilot to generate Tailwind config for width classes"
+title: "Using ChatGPT, Github Copilot and Phind to generate Tailwind config for width classes"
 seoTitle: "ChatGPT, GitHub Copilot: How to generate Tailwind width configuration"
 seoDescription: "Compare ChatGPT & Github Copilot's methods for creating custom Tailwind width classes with golden ratio; evaluate effectiveness and accuracy"
 datePublished: Fri Oct 20 2023 11:00:07 GMT+0000 (Coordinated Universal Time)
 cuid: clnyi1tbf000009k00cnqemw4
-slug: using-chatgpt-and-github-copilot-to-generate-tailwind-config-for-width-classes
+slug: using-chatgpt-github-copilot-and-phind-to-generate-tailwind-config-for-width-classes
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1697801455326/e065a4e3-a08d-4097-9299-8f4b89de16e5.png
 tags: ai, ruby, ruby-on-rails, tailwind-css, chatgpt
 
