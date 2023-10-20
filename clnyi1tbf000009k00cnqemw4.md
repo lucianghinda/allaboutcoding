@@ -60,4 +60,10 @@ And it replied with the following:
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1697734476571/133df7c4-652b-40d4-8c12-f6d35166614d.png align="center")
 
-First, it seems that it was not aware that Tailwind already has width classes up until 384px. But it did apply with an approximation of the golden ratio when spacing the width classes.
+It seems that it was not aware that Tailwind already has width classes up until 384px. But it did apply with an approximation of the golden ratio when spacing the width classes.
+
+---
+
+Enjoyed this article?
+
+Join my [**Short Ruby News**](https://shortruby.com/) **newsletter** for weekly Ruby updates from the community. For more Ruby **learning resources**, visit [**rubyandrails.info**](http://rubyandrails.info)**. You can also find me** [**onRuby.social**](http://onRuby.social) **or** [**Linkedin**](https://linkedin.com/in/lucianghinda) **or** [**Twitter**](https://x.com/lucianghinda)
