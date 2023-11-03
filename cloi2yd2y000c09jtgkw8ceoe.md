@@ -119,7 +119,7 @@ See this example of a check for MySQL from the same file:
     
 * [localhost](https://github.com/socketry/localhost) - *"This gem provides a convenient API for generating per-user self-signed root certificates"*
     
-* [activerecord-nulldb-adapter](https://github.com/nulldb/nulldb) - ***"****NullDB is the Null Object pattern as applied to ActiveRecord database adapters. It is a database backend that translates database interactions into no-ops. Using NullDB enables you to test your model business logic - including after\_save hooks - without ever touching a real database"*
+* [activerecord-nulldb](https://github.com/nulldb/nulldb) - "*NullDB is the Null Object pattern as applied to ActiveRecord database adapters. It is a database backend that translates database interactions into no-ops. Using NullDB enables you to test your model business logic - including after\_save hooks - without ever touching a real database"*
     
 
 ### Design Patterns
