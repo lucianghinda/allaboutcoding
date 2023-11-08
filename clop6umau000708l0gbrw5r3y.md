@@ -109,3 +109,9 @@ Still, when looking at the total number of downloads (see the comparison image b
 The rapid increase in Ruby gem downloads since 2019 can be attributed to the widespread adoption of CI/CD pipelines (with a small note that a lot of CI/CD tools were launched years before) and also to the growing popularity of Ruby in new projects.
 
 This trend reflects the growing importance of Ruby in the software development ecosystem.
+
+---
+
+Enjoyed this article?
+
+Join my [**Short Ruby News**](https://shortruby.com/) **newsletter** for weekly Ruby updates from the community. For more Ruby **learning resources**, visit [**rubyandrails.info**](http://rubyandrails.info)**.** You can also find me on [**Ruby.social**](http://onRuby.social) or [**Linkedin**](https://linkedin.com/in/lucianghinda) or [**Twitter**](https://x.com/lucianghinda)**.**
