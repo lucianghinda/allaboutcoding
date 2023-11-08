@@ -27,11 +27,18 @@ Here is how I read this, first there are two data sets: the total downloads and 
 
 It is a sum of downloads of all gems -&gt; so of course this will always be increasing.
 
-But what I think is interesting is how fast the total downloads are increasing. I think it can be seen with the naked eye that starting with say 2019/2020 the total downloads are increasing:
+But what I think is interesting is how fast the total downloads are increasing. I think it can be seen with the naked eye that starting with say 2019/2020 the total downloads are increasing a lot:
 
-* **1.47B** downloads in 2013-07-1 and **3.71B** downloads in 2019-07-01 = **a difference of ~2B downloads increased in 5 years**
+* **~2B downloads increase from 2013 to 2019**
     
-* and then we have **137.53B** downloads in 2023-07-01 = **a difference since 2019 of ~135B downloads in 4 years**
+* **~133 B downloads increase from 2019 to 2023**
+    
+
+How do I get to this differences:
+
+* 1.47B downloads in 2013-07-01 and 3.71B downloads in 2019-07-01 =&gt; a difference of about **2.24B**
+    
+* 3.71B downloads in 2019-07-01 and 137.53B downloads in 2023-07-01 =&gt; a difference of about **133.82B**
     
 
 *Conclusion:* There are two orders of magnitude increase in the total downloads in the last 4 years versus the previous 5 years.
@@ -40,9 +47,14 @@ But what I think is interesting is how fast the total downloads are increasing. 
 
 If the total downloads are increased of course also daily downloads are increased.
 
-In 2013 the graph starts with **5.75 M** downloads per day (in 2013-07-03). Then we have **50M** downloads per day in 2019-07-03. And then **127M** downloads per day on 2023-07-11.
+* **5.75M** daily downloads in 2013 (data point taken on 2013-07-03)
+    
+* **50M** daily downloads in 2019 (data point taken on 2019-07-03)
+    
+* **127M** daily downloads in 2023 (data point taken on 2023-07-11)
+    
 
-Conclusion: the number of downloads per day is more than double, with some periods from 2019 until 2023 with a higher number of downloads per day (like 160M or 154M).
+*Conclusion*: the number of downloads per day is more than double, with some periods from 2019 until 2023 with a higher number of downloads per day (like 160M or 154M).
 
 ## What does this mean?
 
