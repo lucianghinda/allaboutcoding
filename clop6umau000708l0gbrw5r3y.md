@@ -104,6 +104,10 @@ Still, when looking at the total number of downloads (see the comparison image b
 
 (left) [https://rubygems.org/stats](https://rubygems.org/stats) vs (right) [https://bestgems.org/stat/downloads](https://bestgems.org/stat/downloads)
 
+On another side, [ruby-toolbox.com](https://www.ruby-toolbox.com/pages/docs/features/historical_rubygem_download_data) is using bestgems.org as a data source:
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1699497691382/ce3bdcdd-9b47-443f-8e5d-ba977ef571b4.png align="center")
+
 ## Maybe a conclusion
 
 The rapid increase in Ruby gem downloads since 2019 can be attributed to the widespread adoption of CI/CD pipelines (with a small note that a lot of CI/CD tools were launched years before) and also to the growing popularity of Ruby in new projects.
