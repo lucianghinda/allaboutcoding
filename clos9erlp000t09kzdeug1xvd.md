@@ -134,6 +134,8 @@ Then these global variables are used in other places in the code:
 
 ### Gems used
 
+Here is a selection from all the gems they use:
+
 * [act\_as\_taggable\_on](https://github.com/mbleigh/acts-as-taggable-on) - *"A tagging plugin for Rails applications that allows for custom tagging along dynamic contexts"*
     
 * [attr\_extras](https://github.com/barsoom/attr_extras) - *"Takes some boilerplate out of Ruby with methods like attr\_initialize"*
