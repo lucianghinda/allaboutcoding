@@ -11,9 +11,9 @@ tags: startups, ruby, ruby-on-rails, coding, side-project
 
 ---
 
-I was reading the other days this [Reddit thread on /r/rails](https://www.reddit.com/r/rails/comments/17s073j) and I thought it would be a good idea to pick some of the things posted there in an article and also share it on my social media channels.
+I discovered this [Reddit thread on /r/rails](https://www.reddit.com/r/rails/comments/17s073j) and I thought it would be a good idea to pick some of the things posted there in an article and also share it on my social media channels.
 
-So the question asked there was the following:
+So the question they asked there was the following:
 
 > **Anyone here use Rails to start their own business?**
 
