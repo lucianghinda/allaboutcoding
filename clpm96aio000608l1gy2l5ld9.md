@@ -276,7 +276,7 @@ def parse_ast_nodes(nodes)
     end
   end
 
-  gemlist = compact.map { |name| rubygems_client.info(name) }
+  gemlist.compact.map { |name| rubygems_client.info(name) }
 end
 ```
 
