@@ -892,7 +892,7 @@ The coverage is a bit hard to guess from the test folder structure:
 
 * not all controllers have a corresponding test in controller specs
     
-* , not all models have a corresponding test in model specs
+* not all models have a corresponding test in model specs
     
 
 Just looking at some numbers (as I don't have time to understand the entire codebase) here is a comparison of the number of files in the app folder vs the number of files in the corresponding specs folder.
