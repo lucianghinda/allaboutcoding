@@ -10,6 +10,12 @@ tags: refactoring, ruby, opensource, ruby-on-rails
 
 While preparing my article for the series that I started about [Open Source Ruby](https://allaboutcoding.ghinda.com/series/open-source-ruby), I found an example of code that I think could benefit from using the endless method.
 
+Here is a video version of this article:
+
+%[https://www.youtube.com/watch?v=nTHL0dvqmI0] 
+
+or continue reading for the text version 👇
+
 ## The original code
 
 The original code is based on Mastodon [ApplicationController](https://github.com/mastodon/mastodon/blob/main/app/controllers/application_controller.rb#L3):
@@ -167,7 +173,7 @@ module RespondWithError
       format.json { render json: { error: Rack::Utils::HTTP_STATUS_CODES[code] }, status: code }
     end
   end
-end 
+end
 ```
 
 ## Read more about the endless method
