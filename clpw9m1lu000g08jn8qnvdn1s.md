@@ -959,7 +959,7 @@ This is done via shared\_examples:
 ```ruby
 # https://github.com/mastodon/mastodon/blob/main/spec/config/initializers/rack/attack_spec.rb#L5
 
-escribe Rack::Attack, type: :request do
+describe Rack::Attack, type: :request do
   def app
     Rails.application
   end
