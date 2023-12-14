@@ -1020,3 +1020,9 @@ Mastodon open-source web app is a well-structured code base, easy to navigate (w
 The code design is simple and easy to understand. The app tried to have slim controllers and pretty well-contained models while delegating more complex business logic to Service objects and simple Ruby objects. This makes the existing tests simple to follow and understand.
 
 I think it could be a good pick for someone who wants to contribute. There are useful pieces of code that can be used as inspiration for other parts.
+
+---
+
+Enjoyed this article?
+
+Join my [**Short Ruby News**](https://shortruby.com/) **newsletter** for weekly Ruby updates from the community. For more Ruby **learning resources**, visit [**rubyandrails.info**](http://rubyandrails.info). You can also find me on [**Ruby.social**](https://ruby.social/@lucian) or [**Linkedin**](https://linkedin.com/in/lucianghinda) or [**Twitter**](https://x.com/lucianghinda) where I post mostly about Ruby and Rails. Subscribe to [**my YouTube channel**](https://www.youtube.com/@shortruby) for short videos about Ruby.
