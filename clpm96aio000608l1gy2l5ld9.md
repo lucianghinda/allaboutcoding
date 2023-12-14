@@ -387,3 +387,9 @@ ChatGPT provided code that failed tests while RubyMine AI provided code that pas
 ChatGPT removed endless methods and refactored them to normal methods. RubyMine AI respected my choice to use endless methods.
 
 I would use an AI tool to kick start a code review and see their answers as a conversaation starter, but will not refactor based on their own review.
+
+---
+
+Enjoyed this article?
+
+Join my [**Short Ruby News**](https://shortruby.com/) **newsletter** for weekly Ruby updates from the community. For more Ruby **learning resources**, visit [**rubyandrails.info**](http://rubyandrails.info). You can also find me on [**Ruby.social**](https://ruby.social/@lucian) or [**Linkedin**](https://linkedin.com/in/lucianghinda) or [**Twitter**](https://x.com/lucianghinda) where I post mostly about Ruby and Rails. Subscribe to [**my YouTube channel**](https://www.youtube.com/@shortruby) for short videos about Ruby.
