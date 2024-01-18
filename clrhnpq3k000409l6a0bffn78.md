@@ -11,7 +11,7 @@ tags: programming-blogs, ruby, github, rails, ruby-on-rails
 
 ---
 
-I had the idea for this project over three months ago and created the Ruby on Rails repo around that time.
+I had the idea for this project ([Ruby and Ruby on Rails courses over email](https://learn.shortruby.com)) three months ago and created the Ruby on Rails repo around that time.
 
 I was unsure what form the product would have, so I focused first on setting up coding styles, static analysis checks, and some other defaults that I consider essential when starting a project.
 
