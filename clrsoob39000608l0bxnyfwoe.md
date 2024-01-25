@@ -5,6 +5,7 @@ seoDescription: "Efficient email courses tech stack: Ruby, Rails, SQLite, litest
 datePublished: Thu Jan 25 2024 03:57:46 GMT+0000 (Coordinated Universal Time)
 cuid: clrsoob39000608l0bxnyfwoe
 slug: the-tech-stack-i-choose-to-build-my-email-courses-project
+canonical: https://learn.shortruby.com/blog/tech-stack
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1706111082387/796f04f9-4e2a-4ba3-80ea-5e943d2a0c9e.png
 tags: ruby, technology, ruby-on-rails, side-project
 
