@@ -21,9 +21,7 @@ Let's take them step by step:
 
 ## How to simplify methods by removing unnecessary transformations
 
-Here is a piece of code that is a public interface of an object. This is not the actual code but an approximation of the actual code.
-
-I had a method that looked like this. Notice the `.symbolize_keys` call and the definition of the `attributes` param that is `T::Hash[T.any(Symbol, String), Integer]` allowing the method to be called with a hash with keys, symbols, or strings.
+Here is a piece of code that is a public interface of an object (this is not the actual code but an approximation of the actual code)
 
 ```ruby
 # typed: strict
@@ -37,6 +35,8 @@ def accepted_attributes(attributes)
 	  .slice(*ACCEPTED_KEYS)
 end
 ```
+
+I had a method that looked like this. Let's first focus on the `.symbolize_keys` call and the definition of the `attributes` param that is `T::Hash[T.any(Symbol, String), Integer]` allowing the method to be called with a hash with keys, symbols, or strings.
 
 Notice that because I defined the `attributes` in that way (to accept both types of keys), I called `symbolize_keys` to transform them into symbols so that I could `slice` by `ACCEPTED_KEYS`, which are symbols.
 
@@ -84,4 +84,4 @@ end
 
 And here comes the second insight:
 
-*The amazing thing about Ruby is that I can refactor that method from using* `slice` *to using* `select` *and still remain explicit and read like an English sentence.*
+*The amazing thing about Ruby is that I can refactor that method from using*`slice`*to using*`select`*and still remain explicit and read like an English sentence.*
