@@ -86,3 +86,15 @@ end
 And here comes the second insight:
 
 *The amazing thing about Ruby is that I can refactor that method from using*`slice`*to using*`select`*and still remain explicit and read like an English sentence.*
+
+---
+
+**Enjoyed this article?**
+
+👐 Subscribe to my Ruby and Ruby on rails courses over email at [**learn.shortruby.com**](https://shortruby.com/)\- effortless learning anytime, anywhere
+
+👉 Join my [**Short Ruby News**](https://shortruby.com/) **newsletter** for weekly Ruby updates from the community and visit [**rubyandrails.info**](https://shortruby.com/)**, a directory with learning content about Ruby.**
+
+🤝 Let's connect on [**Ruby.social**](https://shortruby.com/) **or** [**Linkedin**](https://linkedin.com/in/lucianghinda) **or** [**Twitter**](https://x.com/lucianghinda) **where I post mainly about Ruby and Rails.**
+
+🎥 Follow me on [**my YouTube channel**](https://www.youtube.com/@shortruby) for short videos about Ruby
