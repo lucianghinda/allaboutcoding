@@ -36,7 +36,7 @@ def accepted_attributes(attributes)
 end
 ```
 
-I had a method that looked like this. Let's first focus on the `.symbolize_keys` call and the definition of the `attributes` param that is `T::Hash[T.any(Symbol, String), Integer]` allowing the method to be called with a hash with keys, symbols, or strings.
+Let's first focus on the `.symbolize_keys` call and the definition of the `attributes` param that is `T::Hash[T.any(Symbol, String), Integer]` allowing the method to be called with a hash with keys, symbols, or strings.
 
 Notice that because I defined the `attributes` in that way (to accept both types of keys), I called `symbolize_keys` to transform them into symbols so that I could `slice` by `ACCEPTED_KEYS`, which are symbols.
 
