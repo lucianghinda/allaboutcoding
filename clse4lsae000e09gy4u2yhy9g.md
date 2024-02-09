@@ -63,7 +63,8 @@ An insight here is that Sorbet can help remove code that is there to handle the 
 Now, if you run the sorbet checker or play online on the sorbet playground, you will get an error that is something like this:
 
 ```ruby
-editor.rb:10: Splats are only supported where the size of the array is known statically https://srb.help/7019
+editor.rb:10: Splats are only supported where the size of the array 
+                is known statically https://srb.help/7019
     10 |  attributes.slice(*ACCEPTED_KEYS)
 ```
 
