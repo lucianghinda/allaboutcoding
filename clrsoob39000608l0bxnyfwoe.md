@@ -213,3 +213,15 @@ AWS S3 could be better for more complex tasks, but if the only need is to upload
 These are the tools I use and why I chose them to build [the email courses project](https://learn.shortruby.com)
 
 I don’t think there exists a thing called “the best tech stack,” but depending on my knowledge and purpose, I can create an excellent tech stack to help me deliver fast and with good code quality.
+
+---
+
+**Enjoyed this article?**
+
+👐 Subscribe to my Ruby and Ruby on rails courses over email at [**learn.shortruby.com**](https://shortruby.com/)\- effortless learning anytime, anywhere
+
+👉 Join my [**Short Ruby News**](https://shortruby.com/) **newsletter** for weekly Ruby updates from the community and visit [**rubyandrails.info**](https://shortruby.com/)**, a directory with learning content about Ruby.**
+
+🤝 Let's connect on [**Ruby.social**](https://shortruby.com/) **or** [**Linkedin**](https://linkedin.com/in/lucianghinda) **or** [**Twitter**](https://x.com/lucianghinda) **where I post mainly about Ruby and Rails.**
+
+🎥 Follow me on [**my YouTube channel**](https://www.youtube.com/@shortruby) for short videos about Ruby
