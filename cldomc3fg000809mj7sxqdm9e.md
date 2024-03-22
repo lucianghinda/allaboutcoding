@@ -1,4 +1,11 @@
-# We should adopt and use new Ruby features
+---
+title: "We should adopt and use new Ruby features"
+datePublished: Fri Feb 03 2023 14:25:20 GMT+0000 (Coordinated Universal Time)
+cuid: cldomc3fg000809mj7sxqdm9e
+slug: we-should-adopt-and-use-new-ruby-features
+tags: programming-blogs, ruby, ruby-on-rails, coding
+
+---
 
 ### A bit of (personal) history
 
