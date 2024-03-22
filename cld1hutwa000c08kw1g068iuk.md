@@ -1,4 +1,11 @@
-# In defense of Ruby's short-hand syntax
+---
+title: "In defense of Ruby's short-hand syntax"
+datePublished: Wed Jan 18 2023 10:01:14 GMT+0000 (Coordinated Universal Time)
+cuid: cld1hutwa000c08kw1g068iuk
+slug: in-defense-of-rubys-short-hand-syntax
+tags: code-review, programming-blogs, ruby, programming-languages
+
+---
 
 *This is primarily a response* [*to a Reddit comment*](https://www.reddit.com/r/rails/comments/10f09zp/comment/j4uev23/?context=3) *but I have encountered this line of pushback against short-hand syntax multiple times. Thus I think it is good to write it down and explain my support for short-hand syntax or, in general, for new language features*
 
