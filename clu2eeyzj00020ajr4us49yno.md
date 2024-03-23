@@ -10,9 +10,9 @@ tags: programming-blogs, ruby, performance, ruby-on-rails
 
 ---
 
-As I was working on another email part of my [Modern Ruby Email Course](https://learn.shortruby.com/courses/modern-ruby) I wanted to make some micro benchmarks on `Data.define` vs `Struct` vs `OpenStruct`
+As I was working on another email part of my [Modern Ruby course via email](https://learn.shortruby.com/courses/modern-ruby) I wanted to make some micro benchmarks on `Data.define` vs `Struct` vs `OpenStruct`
 
-They are not a production level benchmark so take it with a grain of salt.
+They are not a production-level benchmark, so take them with a grain of salt.
 
 I added all code and results in a repo at [https://github.com/lucianghinda/value-object-in-ruby-benchmarks](https://github.com/lucianghinda/value-object-in-ruby-benchmarks)
 
@@ -117,15 +117,27 @@ Comparison:
           OpenStruct:    13474.6 i/s - 2.13x  slower
 ```
 
-## Curious to learn more about this?
+## Context for understanding why Data.define and Struct are similar
 
-If you want to learn more about `Data.define`, its gotchas, when and how to use it, and real code examples, I am writing a course called [“Modern Ruby Syntax”](https://learn.shortruby.com/courses/modern-ruby), where I explore the `Data.define` along with other new Ruby features.
+[Ufuk Kayserilioglu](https://ruby.social/@ufuk) [explains](https://ruby.social/@ufuk/112141972493634321) why `Data.define` and `Struct` with keyword arguments have the same behavior:
+
+![Ufuk explaining: "Data is (basically) just Struct with no writer methods defined (and a freeze, I believe). The CRuby codepaths are exactly the same for both, except zverok decided that Data#initialize should always accept kw arguments, so Data.new has to convert positional args to kw args before passing them to initialize."](https://cdn.hashnode.com/res/hashnode/image/upload/v1711170357937/75fad78f-b200-436d-93c3-4b59a2e96318.png align="center")
+
+## A note about `OpenStruct`
+
+[Jean Boussier](https://github.com/byroot) [answered](https://twitter.com/_byroot/status/1771221003051422101) a question about why OpenStruct is so slow:
+
+![Jean Boussier explaining "It's not because it's written in Ruby but because of it's semantic.  For every single instance it has to create a metaclass and define methods on it. It's terribly wasteful and doing the same in C wouldn't be much faster.  OpenStruct should be considered deprecated really."](https://cdn.hashnode.com/res/hashnode/image/upload/v1711170068681/4d2394ac-51f8-4e8e-b7a2-7e84d69235b1.png align="center")
+
+## Updates
+
+This article was updated on 2024-03-23 after [**Ufuk Kayserilioglu**](https://twitter.com/paracycle) added a PR to the repo after he [noticed](https://twitter.com/paracycle/status/1771178501015580769) an error in my benchmarking where I was comparing Data.define with Struct with positional arguments. And I also added explanation shared by Jean Boussier about the slowness of OpenStruct and explanation by Ufuk about the similar behaviour of Data.define and Struct.
 
 ---
 
 **Enjoyed this article?**
 
-👐 Subscribe to my Ruby and Ruby on rails courses over email at [**learn.shortruby.com**](http://learn.shortruby.com/)**\- effortless learning about Ruby anytime, anywhere**
+👐 Subscribe to my Ruby and Ruby on Rails courses over email at [**learn.shortruby.com**](http://learn.shortruby.com/)**\- effortless learning about Ruby anytime, anywhere**
 
 👉 Join my [**Short Ruby News**](https://shortruby.com/)**newsletter** for weekly Ruby updates from the community and visit [**rubyandrails.info**](http://rubyandrails.info/)**, a directory with learning content about Ruby.**
 
