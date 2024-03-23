@@ -18,22 +18,22 @@ I added all code and results in a repo at [https://github.com/lucianghinda/value
 
 ## Creating new objects
 
-When creating a new object `Struct.new` is the fastest one looking at all 3 tests and `OpenStruct` is the slowest one.
+When creating a new object, Struct (with keyword\_init)and Data.define behave almost the same (the differences are with error margin or so small that they are probably due to my setup), while `OpenStruct` seems to be the slowest one.
 
 Here is a `` `bmbm` `` benchmark result:
 
 ```bash
 Creating a new object - Benchmark with bmbm
 Rehearsal --------------------------------------------------
-Struct.new       0.000005   0.000000   0.000005 (  0.000004)
-Data.define      0.000042   0.000001   0.000043 (  0.000041)
-OpenStruct.new   0.001642   0.000075   0.001717 (  0.001718)
------------------------------------------ total: 0.001765sec
+Struct.new       0.000023   0.000003   0.000026 (  0.000024)
+Data.define      0.000020   0.000001   0.000021 (  0.000022)
+OpenStruct.new   0.001705   0.000075   0.001780 (  0.001780)
+----------------------------------------- total: 0.001827sec
 
                      user     system      total        real
-Struct.new       0.000004   0.000001   0.000005 (  0.000004)
-Data.define      0.000044   0.000000   0.000044 (  0.000044)
-OpenStruct.new   0.001061   0.000015   0.001076 (  0.001079)
+Struct.new       0.000020   0.000000   0.000020 (  0.000020)
+Data.define      0.000022   0.000000   0.000022 (  0.000022)
+OpenStruct.new   0.001069   0.000044   0.001113 (  0.001132)
 ```
 
 Here is the `ibs` benchmark result:
@@ -42,59 +42,59 @@ Here is the `ibs` benchmark result:
 Creating a new object - Benchmark with ips
 ruby 3.3.0 (2023-12-25 revision 5124f9ac75) [arm64-darwin23]
 Warming up --------------------------------------
-          Struct.new    36.826k i/100ms
-         Data.define     2.613k i/100ms
-      OpenStruct.new    57.000 i/100ms
+          Struct.new     5.169k i/100ms
+         Data.define     5.361k i/100ms
+      OpenStruct.new    62.000 i/100ms
 Calculating -------------------------------------
-          Struct.new    376.794k (±10.1%) i/s -      1.878M in   5.039312s
-         Data.define     25.731k (± 1.7%) i/s -    130.650k in   5.078945s
-      OpenStruct.new    584.608 (± 1.2%) i/s -      2.964k in   5.070709s
+          Struct.new     50.086k (± 1.7%) i/s -    253.281k in   5.058450s
+         Data.define     51.646k (± 1.1%) i/s -    262.689k in   5.086990s
+      OpenStruct.new    607.447 (± 0.8%) i/s -      3.038k in   5.001584s
 
 Comparison:
-          Struct.new:   376794.1 i/s
-         Data.define:    25731.1 i/s - 14.64x  slower
-      OpenStruct.new:      584.6 i/s - 644.52x  slower
+         Data.define:    51646.3 i/s
+          Struct.new:    50085.7 i/s - 1.03x  slower
+      OpenStruct.new:      607.4 i/s - 85.02x  slower
 ```
 
-Here is the `memory` benchmark result:
+Here is the `memory` benchmark result.
 
 ```bash
 Creating a new object - Benchmark with ips
 Calculating -------------------------------------
-          Struct.new     8.040k memsize (     0.000  retained)
-                         1.000  objects (     0.000  retained)
+          Struct.new    36.792k memsize (     0.000  retained)
+                         2.000  objects (     0.000  retained)
                          0.000  strings (     0.000  retained)
          Data.define    36.792k memsize (     0.000  retained)
                          2.000  objects (     0.000  retained)
                          0.000  strings (     0.000  retained)
-      OpenStruct.new   791.224k memsize (     0.000  retained)
-                         8.003k objects (     0.000  retained)
+      OpenStruct.new   848.728k memsize (     0.000  retained)
+                         8.005k objects (     0.000  retained)
                         50.000  strings (     0.000  retained)
 
 Comparison:
-          Struct.new:       8040 allocated
-         Data.define:      36792 allocated - 4.58x more
-      OpenStruct.new:     791224 allocated - 98.41x more
+          Struct.new:      36792 allocated
+         Data.define:      36792 allocated - same
+      OpenStruct.new:     848728 allocated - 23.07x more
 ```
 
 ## Accessing attributes
 
-This time `Data.define` is maybe the fastest one but there is not a signifiant difference to `Struct`. On the other side `OpenStruct` is almost twice as slow.
+Again `Data.define` and `Struct` with keyword arguments are the same. On the other side `OpenStruct` is almost twice as slow.
 
 Here is the `bmbm` benchmark result:
 
 ```bash
 Accessing attributes - bmbm test
 Rehearsal -----------------------------------------------
-Struct        0.000070   0.000002   0.000072 (  0.000070)
-Data.define   0.000064   0.000002   0.000066 (  0.000065)
-OpenStruct    0.000108   0.000005   0.000113 (  0.000113)
--------------------------------------- total: 0.000251sec
+Struct        0.000069   0.000002   0.000071 (  0.000071)
+Data.define   0.000069   0.000003   0.000072 (  0.000071)
+OpenStruct    0.000110   0.000003   0.000113 (  0.000116)
+-------------------------------------- total: 0.000256sec
 
                   user     system      total        real
-Struct        0.000044   0.000001   0.000045 (  0.000044)
-Data.define   0.000042   0.000000   0.000042 (  0.000042)
-OpenStruct    0.000090   0.000001   0.000091 (  0.000089)
+Struct        0.000049   0.000001   0.000050 (  0.000046)
+Data.define   0.000046   0.000001   0.000047 (  0.000046)
+OpenStruct    0.000091   0.000001   0.000092 (  0.000094)
 ```
 
 Here is the `ibs` benchmark result:
@@ -103,18 +103,18 @@ Here is the `ibs` benchmark result:
 Accessing attributes - ips test
 ruby 3.3.0 (2023-12-25 revision 5124f9ac75) [arm64-darwin23]
 Warming up --------------------------------------
-              Struct     2.741k i/100ms
-         Data.define     2.799k i/100ms
-          OpenStruct     1.370k i/100ms
+              Struct     2.857k i/100ms
+         Data.define     2.828k i/100ms
+          OpenStruct     1.384k i/100ms
 Calculating -------------------------------------
-              Struct     27.832k (± 0.2%) i/s -    139.791k in   5.022750s
-         Data.define     27.989k (± 0.3%) i/s -    139.950k in   5.000245s
-          OpenStruct     13.434k (± 0.5%) i/s -     68.500k in   5.099337s
+              Struct     28.420k (± 0.9%) i/s -    142.850k in   5.026906s
+         Data.define     28.691k (± 0.5%) i/s -    144.228k in   5.027131s
+          OpenStruct     13.475k (± 0.9%) i/s -     67.816k in   5.033315s
 
 Comparison:
-         Data.define:    27988.9 i/s
-              Struct:    27831.7 i/s - 1.01x  slower
-          OpenStruct:    13433.5 i/s - 2.08x  slower
+         Data.define:    28690.8 i/s
+              Struct:    28419.6 i/s - same-ish: difference falls within error
+          OpenStruct:    13474.6 i/s - 2.13x  slower
 ```
 
 ## Curious to learn more about this?
