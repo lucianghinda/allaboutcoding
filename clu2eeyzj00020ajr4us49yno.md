@@ -168,13 +168,13 @@ Comparison:
 
 ## Context for understanding why Data.define and Struct are similar
 
-[Ufuk Kayserilioglu](https://ruby.social/@ufuk)[explains](https://ruby.social/@ufuk/112141972493634321) why `Data.define` and `Struct` with keyword arguments have the same behavior:
+[Ufuk Kayserilioglu](https://ruby.social/@ufuk) [explains](https://ruby.social/@ufuk/112141972493634321) why `Data.define` and `Struct` with keyword arguments have the same behavior:
 
 ![Ufuk explaining: "Data is (basically) just Struct with no writer methods defined (and a freeze, I believe). The CRuby codepaths are exactly the same for both, except zverok decided that Data#initialize should always accept kw arguments, so Data.new has to convert positional args to kw args before passing them to initialize."](https://cdn.hashnode.com/res/hashnode/image/upload/v1711170357937/75fad78f-b200-436d-93c3-4b59a2e96318.png align="center")
 
 ## A note about `OpenStruct`
 
-[Jean Boussier](https://github.com/byroot)[answered](https://twitter.com/_byroot/status/1771221003051422101) a question about why OpenStruct is so slow:
+[Jean Boussier](https://github.com/byroot) [answered](https://twitter.com/_byroot/status/1771221003051422101) a question about why OpenStruct is so slow:
 
 ![Jean Boussier explaining "It's not because it's written in Ruby but because of it's semantic.  For every single instance it has to create a metaclass and define methods on it. It's terribly wasteful and doing the same in C wouldn't be much faster.  OpenStruct should be considered deprecated really."](https://cdn.hashnode.com/res/hashnode/image/upload/v1711170068681/4d2394ac-51f8-4e8e-b7a2-7e84d69235b1.png align="center")
 
