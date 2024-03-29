@@ -18,7 +18,31 @@ I added all code and results in a repo at [https://github.com/lucianghinda/value
 
 ## Creating new objects
 
-When creating a new object, Struct (with keyword\_init)and Data.define behave almost the same (the differences are with error margin or so small that they are probably due to my setup), while `OpenStruct` seems to be the slowest one.
+When creating a new object, `Struct` (with `keyword_init: true`)and `Data.define` behave almost the same (the differences are with error margin or so small that they are probably due to my setup), while `OpenStruct` seems to be the slowest.
+
+Having defines the following keys and values:
+
+```ruby
+keys = 1000.times.map { |i| "key#{i}".to_sym }
+values = 1000.times.map { |i| "value#{i}" }
+keys_and_values = Hash[keys.zip(values)]
+```
+
+The creation benchmarks are testing the following code:
+
+```ruby
+DataStruct = Struct.new(*keys, keyword_init: true)
+DataStruct.new(**keys_and_values)
+
+# vs
+
+DataDefine = Data.define(*keys)
+DataDefine.new(**keys_and_values)
+
+# vs
+
+OpenStruct.new(**keys_and_values)
+```
 
 Here is a `` `bmbm` `` benchmark result:
 
@@ -81,6 +105,31 @@ Comparison:
 
 Again `Data.define` and `Struct` with keyword arguments are the same. On the other side `OpenStruct` is almost twice as slow.
 
+Having the following data defined:
+
+```ruby
+keys = 1000.times.map { |i| "key#{i}".to_sym }
+values = 1000.times.map { |i| "value#{i}" }
+keys_and_values = Hash[keys.zip(values)]
+```
+
+And then defining the following structures:
+
+```ruby
+BigDataS = Struct.new(*keys, keyword_init: true)
+BigDataD = Data.define(*keys)
+```
+
+The benchmarks are comparing:
+
+```ruby
+keys.each { struct_object.send(_1) }
+
+keys.each { data_object.send(_1) }
+
+keys.each { opens_struct_object.send(_1) }
+```
+
 Here is the `bmbm` benchmark result:
 
 ```bash
@@ -119,13 +168,13 @@ Comparison:
 
 ## Context for understanding why Data.define and Struct are similar
 
-[Ufuk Kayserilioglu](https://ruby.social/@ufuk) [explains](https://ruby.social/@ufuk/112141972493634321) why `Data.define` and `Struct` with keyword arguments have the same behavior:
+[Ufuk Kayserilioglu](https://ruby.social/@ufuk)[explains](https://ruby.social/@ufuk/112141972493634321) why `Data.define` and `Struct` with keyword arguments have the same behavior:
 
 ![Ufuk explaining: "Data is (basically) just Struct with no writer methods defined (and a freeze, I believe). The CRuby codepaths are exactly the same for both, except zverok decided that Data#initialize should always accept kw arguments, so Data.new has to convert positional args to kw args before passing them to initialize."](https://cdn.hashnode.com/res/hashnode/image/upload/v1711170357937/75fad78f-b200-436d-93c3-4b59a2e96318.png align="center")
 
 ## A note about `OpenStruct`
 
-[Jean Boussier](https://github.com/byroot) [answered](https://twitter.com/_byroot/status/1771221003051422101) a question about why OpenStruct is so slow:
+[Jean Boussier](https://github.com/byroot)[answered](https://twitter.com/_byroot/status/1771221003051422101) a question about why OpenStruct is so slow:
 
 ![Jean Boussier explaining "It's not because it's written in Ruby but because of it's semantic.  For every single instance it has to create a metaclass and define methods on it. It's terribly wasteful and doing the same in C wouldn't be much faster.  OpenStruct should be considered deprecated really."](https://cdn.hashnode.com/res/hashnode/image/upload/v1711170068681/4d2394ac-51f8-4e8e-b7a2-7e84d69235b1.png align="center")
 
