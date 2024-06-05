@@ -318,3 +318,15 @@ The endless method could be a good fit for simple, one expression methods, when 
 ## Recommended reading
 
 Another good introduction was written by Victor Shepelv on [RubyReferences](https://rubyreferences.github.io/rubychanges/3.0.html#endless-method-definition) website and he also wrote [a more in-depth exploration on his blog](https://zverok.space/blog/2023-12-01-syntax-sugar5-endless-methods.html). I strongly recommend you to read them both, specially the in-depth exploration.
+
+---
+
+**Enjoyed this article?**
+
+👐 Subscribe to my Ruby and Ruby on Rails courses over email at [**learn.shortruby.com**](http://learn.shortruby.com/)**\- effortless learning about Ruby anytime, anywhere**
+
+👉 Join my [**Short Ruby Newsletter**](https://newsletter.shortruby.com) for weekly Ruby updates from the community and visit [**rubyandrails.info**](http://rubyandrails.info/)**, a directory with learning content about Ruby.**
+
+🤝 Let's connect on [**Ruby.social**](http://ruby.social/) **or** [**Linkedin**](https://linkedin.com/in/lucianghinda) **or** [**Twitter**](https://x.com/lucianghinda) **where I post mainly about Ruby and Rails.**
+
+🎥 Follow me on [**my YouTube channel**](https://www.youtube.com/@shortruby) for short videos about Ruby
