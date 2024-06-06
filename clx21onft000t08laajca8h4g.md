@@ -6,6 +6,7 @@ datePublished: Wed Jun 05 2024 16:30:25 GMT+0000 (Coordinated Universal Time)
 cuid: clx21onft000t08laajca8h4g
 slug: endless-method-a-quick-intro
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1717592767514/6ce3f5d7-881f-4346-84a1-7ef05790f6a9.png
+ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1717642951830/ab5e8a6c-cb33-4955-85cc-e584703b5ecc.png
 tags: ruby, technology, rails, features, syntax, coding
 
 ---
