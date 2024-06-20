@@ -13,7 +13,7 @@ tags: refactoring, programming-blogs, ruby, ruby-on-rails
 
 You can use the endless method to name a transaction block in Rails.
 
-This is a technique **Kasper Timm Hansen** [shared](https://ruby.social/@kaspth/112571908837369243) in a reply to my previous post. I will try to refactor some examples from two open-source Rails repositories just to explore how the code looks.
+This is a technique **Kasper Timm Hansen**[shared](https://ruby.social/@kaspth/112571908837369243) in a reply to my previous post. I will try to refactor some examples from two open-source Rails repositories just to explore how the code looks.
 
 This open-ended exercise is a playground for experimenting with the code shape and seeing if it offers any advantages. Your feedback is not only welcome but anticipated. I invite you to play with it, too, and try to assess from various perspectives how it affects your ability to read and understand the code.
 
@@ -186,7 +186,7 @@ I think this is valid point. When I encounter a new code shape I have the same r
 
 ### Making the code non-linear
 
-[Dima Fatko](https://x.com/fatkodima) [mentioned](https://x.com/fatkodima/status/1803388532192329844) that doing this kind of transformation make the code "strange, cryptic and non-linear flow".
+[Dima Fatko](https://x.com/fatkodima)[mentioned](https://x.com/fatkodima/status/1803388532192329844) that doing this kind of transformation make the code "strange, cryptic and non-linear flow".
 
 > Previously, the code was simple, clear, idiomatic, had linear flow. Now, the code is strange, cryptic, non-linear flow - you need to look past the method definition to see that there is some other code, wat
 
@@ -231,7 +231,7 @@ This is another argument from [Bradley Schaefer](https://ruby.social/@soulcutter
 
 ### Add the most important piece of information before the method definition
 
-[**J**](https://x.com/jakeonrails)[**ake Moffatt**](https://x.com/jakeonrails) proposed a better way to revel the `transaction` information by making it explicit and preceding the definition of a normal method:
+[**Jake Moffatt**](https://x.com/jakeonrails) proposed a better way to revel the `transaction` information by making it explicit and preceding the definition of a normal method:
 
 ```ruby
 transaction def replace_and_destroy!(replacement)
@@ -242,4 +242,16 @@ end
 
 I really like this idea and if would not be for the price to pay for this - adding metaprogramming - that he mentions I think we would see more code that brings some important context as a kind of prefix for the method call.
 
-I also agree to some extend with [**Mikael Henriksson**](https://x.com/mhenrixon)**'s** [post](https://x.com/mhenrixon/status/1803666199366058435) that *"method macros can make the code hard to reason about"*. And I would split the method macros in two: part of the language and created by the user. I think `private` or `protected` keywords can be safely added to a method and would not affect the readability/understandability of the method, but when defining custom macros than it indeed a balance to consider and a choice to make.
+I also agree to some extend with [**Mikael Henriksson**](https://x.com/mhenrixon)**'s**[post](https://x.com/mhenrixon/status/1803666199366058435) that *"method macros can make the code hard to reason about"*. And I would split the method macros in two: part of the language and created by the user. I think `private` or `protected` keywords can be safely added to a method and would not affect the readability/understandability of the method, but when defining custom macros than it indeed a balance to consider and a choice to make.
+
+---
+
+**Enjoyed this article?**
+
+👐 Subscribe to my Ruby and Ruby on Rails courses over email at [**learn.shortruby.com**](http://learn.shortruby.com/)**\- effortless learning about Ruby anytime, anywhere**
+
+👉 Join my [**Short Ruby Newsletter**](https://newsletter.shortruby.com) for weekly Ruby updates from the community and visit [**rubyandrails.info**](http://rubyandrails.info/)**, a directory with learning content about Ruby.**
+
+🤝 Let's connect on [**Ruby.social**](http://ruby.social/) or [**Linkedin**](https://linkedin.com/in/lucianghinda) or [**Twitter**](https://x.com/lucianghinda) where I post mainly about Ruby and Ruby on Rails
+
+🎥 Follow me on [**my YouTube channel**](https://www.youtube.com/@shortruby) for short videos about Ruby
