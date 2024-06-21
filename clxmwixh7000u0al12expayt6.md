@@ -11,9 +11,9 @@ tags: refactoring, programming-blogs, ruby, ruby-on-rails
 
 ---
 
-You can use the endless method to name a transaction block in Rails.
+I previously wrote [a quick intro to the endless method in Ruby](https://allaboutcoding.ghinda.com/endless-method-a-quick-intro) and now I will  try to use it to name transaction blocks in Rails.
 
-This is a technique **Kasper Timm Hansen**[shared](https://ruby.social/@kaspth/112571908837369243) in a reply to my previous post. I will try to refactor some examples from two open-source Rails repositories just to explore how the code looks.
+This is a technique **Kasper Timm Hansen** [shared](https://ruby.social/@kaspth/112571908837369243) in a reply to my previous post. I will try to refactor some examples from two open-source Rails repositories just to explore how the code looks.
 
 This open-ended exercise is a playground for experimenting with the code shape and seeing if it offers any advantages. Your feedback is not only welcome but anticipated. I invite you to play with it, too, and try to assess from various perspectives how it affects your ability to read and understand the code.
 
