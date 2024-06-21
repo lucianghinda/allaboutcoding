@@ -223,7 +223,7 @@ private def replace_and_destroy!(replacement) = transaction do
 
 I like this idea to pack more high-level context or constraints around the method definition.
 
-### [Using endles](https://x.com/mhenrixon)s [methods to organi](https://x.com/mhenrixon)ze them in "dense blocks"
+### Using endless methods to organize them in "dense blocks"
 
 This is another argument from [Bradley Schaefer](https://ruby.social/@soulcutter) shared [on Lobsters](https://lobste.rs/s/nfoya5/useless_ruby_sugar_endless_one_line#c_kx2xqu) that I think it is worth sharing here on its entirety:
 
