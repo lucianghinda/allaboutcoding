@@ -514,9 +514,21 @@ If you want to read more about this feature I recommend:
     
 * The Ruby Change log entry about this feature: [https://rubyreferences.github.io/rubychanges/3.1.html#values-in-hash-literals-and-keyword-arguments-can-be-omitted](https://rubyreferences.github.io/rubychanges/3.1.html#values-in-hash-literals-and-keyword-arguments-can-be-omitted)
     
-
 * A deep dive by Victor Shepelev [https://zverok.space/blog/2023-11-10-syntax-sugar3-hash-values-omission.html](https://zverok.space/blog/2023-11-10-syntax-sugar3-hash-values-omission.html)
     
 * A critique from Bozhidar Batsov [https://batsov.com/articles/2022/01/20/bad-ruby-hash-value-omission](https://batsov.com/articles/2022/01/20/bad-ruby-hash-value-omission/)
     
 * A proposal to adop hash value omission I wrote when I was working at Cookpad to merge it to our style guides: [https://github.com/cookpad/global-style-guides/pull/195](https://github.com/cookpad/global-style-guides/pull/195)
+    
+
+---
+
+**Enjoyed this article?**
+
+👐 Subscribe to my Ruby and Ruby on Rails courses over email at [**learn.shortruby.com**](http://learn.shortruby.com/)**\- effortless learning about Ruby anytime, anywhere**
+
+👉 Join my [**Short Ruby Newsletter**](https://newsletter.shortruby.com) for weekly Ruby updates from the community and visit [**rubyandrails.info**](http://rubyandrails.info/)**, a directory with learning content about Ruby.**
+
+🤝 Let's connect on [**Ruby.social**](http://ruby.social/) or [**Linkedin**](https://linkedin.com/in/lucianghinda) or [**Twitter**](https://x.com/lucianghinda) where I post mainly about Ruby and Ruby on Rails
+
+🎥 Follow me on [**my YouTube channel**](https://www.youtube.com/@shortruby) for short videos about Ruby
