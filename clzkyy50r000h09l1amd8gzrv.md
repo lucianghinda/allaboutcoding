@@ -15,7 +15,7 @@ Here is why you should come to [Friendly.rb Ruby Conference](https://friendlyrb.
 I am one of the co-organizers so I will be subjective. I also like and participate in other #Ruby conferences, so you should check them out, too.  [https://rubyconferences.org](https://rubyconferences.org) is a great place to discover new conferences.  
 Let's talk about Friendly RB!
 
-## **1️⃣ It's a two-day conference with a relaxed schedule and a maximum of 130 participants.**
+## **1️⃣ It's a two-day conference with a relaxed schedule and a maximum of 130 participants**
 
 We have generous breaks, a warm and comfy venue, and good coffee.
 
@@ -81,4 +81,4 @@ And if you want to plan your visit to #Bucharest, we have a section with valuabl
 * [Lucian’s Favourite Coffee places](https://avo-hq.notion.site/Lucian-s-Favourite-Coffee-places-2728f91d520d4287ad86942d53c9a480)
     
 
-You can discover more resources to help you plan your visit at [https://friendlyrb.com/bucharest](https://friendlyrb.com/bucharest):
+You can discover more resources to help you plan your visit at [https://friendlyrb.com/bucharest](https://friendlyrb.com/bucharest)
