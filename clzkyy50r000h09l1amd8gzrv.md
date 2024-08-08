@@ -12,7 +12,7 @@ tags: conference, ruby, rails, ruby-on-rails, friendlyrb
 ---
 
 Here is why you should come to [Friendly.rb Ruby Conference](https://friendlyrb.com) in September (18-19 September, in Bucharest, Romania).   
-I am one of the co-organizers so that I will be subjective. I also like and participate in other #Ruby conferences, so you should check them out, too.  [https://rubyconferences.org](https://rubyconferences.org) is a great place to discover new conferences.  
+I am one of the co-organizers so I will be subjective. I also like and participate in other #Ruby conferences, so you should check them out, too.  [https://rubyconferences.org](https://rubyconferences.org) is a great place to discover new conferences.  
 Let's talk about Friendly RB!
 
 ## **1️⃣ It's a two-day conference with a relaxed schedule and a maximum of 130 participants.**
