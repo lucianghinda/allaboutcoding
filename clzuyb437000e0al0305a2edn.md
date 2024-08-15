@@ -1,7 +1,7 @@
 ---
 title: "Proposal for making private method work on constants too"
-seoTitle: "Proposal to change private Keyword to work on Constants in Ruby"
-seoDescription: "Proposal to reopen discussion on making the `private` keyword work on constants in Ruby for better code simplicity and consistency"
+seoTitle: "Proposal to change private method to work on Constants in Ruby"
+seoDescription: "Proposal to reopen discussion on making the `private` method work on constants in Ruby for better code simplicity and consistency"
 datePublished: Thu Aug 15 2024 07:20:38 GMT+0000 (Coordinated Universal Time)
 cuid: clzuyb437000e0al0305a2edn
 slug: proposal-for-making-private-keyword-work-on-constants-too
