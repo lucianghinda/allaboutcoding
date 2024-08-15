@@ -1,12 +1,12 @@
 ---
-title: "Proposal for making private keyword work on constants too"
+title: "Proposal for making private method work on constants too"
 seoTitle: "Proposal to change private Keyword to work on Constants in Ruby"
 seoDescription: "Proposal to reopen discussion on making the `private` keyword work on constants in Ruby for better code simplicity and consistency"
 datePublished: Thu Aug 15 2024 07:20:38 GMT+0000 (Coordinated Universal Time)
 cuid: clzuyb437000e0al0305a2edn
 slug: proposal-for-making-private-keyword-work-on-constants-too
-cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1723702639816/b19de5e7-1af0-4e89-9713-e9e0483d123b.png
-ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1723702683205/c7b27b14-7eb3-41b5-86fc-2c86d8d567cf.png
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1723727612642/f9b62447-b5f5-4230-878e-2de0f922057a.png
+ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1723727622975/213c37d7-aa1f-427e-aab4-d294fe6e69cb.png
 tags: code, programming-blogs, ruby, ruby-on-rails
 
 ---
