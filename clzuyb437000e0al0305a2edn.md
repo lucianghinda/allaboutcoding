@@ -11,7 +11,7 @@ tags: code, programming-blogs, ruby, ruby-on-rails
 
 ---
 
-There was a proposal on the Ruby bug tracker a while back about making the `private` keyword work also on constants:
+There was a proposal on the Ruby bug tracker a while back about making the `private` method work also on constants:
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1723695827199/a5cec95d-bfc3-4a39-a4e0-cd45f4933b66.png align="center")
 
@@ -77,7 +77,7 @@ Of course in this case while the intention of the information is communicated pr
 
 `private` and `private_constant`
 
-But moreso it is a confusing thing that when first learning Ruby you just have to learn it: the `private` keyword does not affect constants so you have to use `private_constant`.
+But moreso it is a confusing thing that when first learning Ruby you just have to learn it: the `private` method does not affect constants so you have to use `private_constant`.
 
 I think a better (in the sense of simplicity and expectations) code design would be to write:
 
@@ -99,7 +99,7 @@ And make Ruby `private` method to affect also constants. So `MyObject::DEFAULT_V
 1. **Principle of least surprise**
     
 
-The main argument for making the `private` keyword work for me would be based on the principle of least surprise: seeing a code like the one above will make everybody think that `DEFAULT_VALUE` is a private constant. So it should work that way.
+The main argument for making the `private` method work for me would be based on the principle of least surprise: seeing a code like the one above will make everybody think that `DEFAULT_VALUE` is a private constant. So it should work that way.
 
 2. **Removing boilerplate**
     
@@ -109,7 +109,7 @@ The second argument is that it will remove a boilerplate code: the `private_cons
 3. **Removes the need to know a trick (maybe still principle of least surprise)**
     
 
-When encountering the keyword `private` the expectation is that what follows is something private. And writing a constant there is now making it public, disrupting the flow of thoughts aobut the visibility of what is in that section of the code.
+When encountering the method `private` the expectation is that what follows is something private. And writing a constant there is now making it public, disrupting the flow of thoughts aobut the visibility of what is in that section of the code.
 
 ## Compatibility concerns
 
@@ -201,7 +201,7 @@ MyObject::AnotherObject.new.hello
 
 But people usually forget to add the `private_constant` here. And even so this goes to the first point where when reading this file, I first read an object that is private.
 
-I think making the `private` keyword affect constants, will open the case to write something like this:
+I think making the `private` method affect constants, will open the case to write something like this:
 
 ```ruby
 class MyObject
