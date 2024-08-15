@@ -96,9 +96,20 @@ And make Ruby `private` method to affect also constants. So `MyObject::DEFAULT_V
 
 ## Arguments in favor of this feature
 
+1. **Principle of least surprise**
+    
+
 The main argument for making the `private` keyword work for me would be based on the principle of least surprise: seeing a code like the one above will make everybody think that `DEFAULT_VALUE` is a private constant. So it should work that way.
 
+2. **Removing boilerplate**
+    
+
 The second argument is that it will remove a boilerplate code: the `private_constant` method should be used in a small number of situations. It seems to me that it should remain in the language but for specific usage.
+
+3. **Removes the need to know a trick (maybe still principle of least surprise)**
+    
+
+When encountering the keyword `private` the expectation is that what follows is something private. And writing a constant there is now making it public, disrupting the flow of thoughts aobut the visibility of what is in that section of the code.
 
 ## Compatibility concerns
 
