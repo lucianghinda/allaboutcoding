@@ -87,6 +87,8 @@ And here comes the second insight:
 
 *The amazing thing about Ruby is that I can refactor that method from using*`slice` *to using* `select`*and still remain explicit and read like an English sentence.*
 
+## A more elegant solution
+
 Another solution (thank you [**Ufuk Kayserilioglu**](https://ufuk.dev) for sending it to me) to fix the warning in Sorbet will be to define the type of the constant as array where I specify the type for each element:
 
 ```diff
@@ -116,6 +118,8 @@ def accepted_attributes(attributes)
   attributes.slice(*ACCEPTED_KEYS)
 end
 ```
+
+I think this is a much more elegant solution that makes the code simpler to read and keeps the original intention to use `slice`
 
 ---
 
