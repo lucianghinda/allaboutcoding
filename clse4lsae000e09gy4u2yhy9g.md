@@ -85,7 +85,46 @@ end
 
 And here comes the second insight:
 
-*The amazing thing about Ruby is that I can refactor that method from using*`slice`*to using*`select`*and still remain explicit and read like an English sentence.*
+*The amazing thing about Ruby is that I can refactor that method from using*`slice` *to using* `select`*and still remain explicit and read like an English sentence.*
+
+Another solution (thank you [**Ufuk Kayserilioglu**](https://ufuk.dev) for sending it to me) to fix the warning in Sorbet will be to define the type of the constant as array where I specify the type for each element:
+
+```diff
+- ACCEPTED_KEYS = T.let(%i[name username email].freeze, T::Array[Symbol])
++ ACCEPTED_KEYS = T.let(%i[name username email].freeze, [Symbol, Symbol, Symbol])
+```
+
+and so have the final code look like this:
+
+```ruby
+ACCEPTED_KEYS = T.let(%i[name username email].freeze, [Symbol, Symbol, Symbol])
+
+sig { params(attributes: T::Hash[Symbol, Integer]).returns(T::Hash[Symbol, Integer])} 
+def accepted_attributes(attributes)  
+  attributes
+	  .slice(*ACCEPTED_KEYS)
+end
+```
+
+Also with [recent changes](https://github.com/sorbet/sorbet/pull/7993) in Sorbet it now knows how to infer the type of the constant without the need to explicitely specify it so the final code would be very simpler like this:
+
+```ruby
+ACCEPTED_KEYS = %i[name username email].freeze
+
+sig { params(attributes: T::Hash[Symbol, Integer]).returns(T::Hash[Symbol, Integer]) }  
+def accepted_attributes(attributes)  
+  attributes.slice(*ACCEPTED_KEYS)
+end
+```
+
+---
+
+Updates:
+
+* 17 August 2024 - Added a new solution to fix the splat operator error from Sorbet provided by Ufuk Kayserilioglu
+    
+* 17 August 2024 - Updated the final example to use the latest Sorbet feature that knows to infer the type of the constants and so removes the need to use `T.let`
+    
 
 ---
 
