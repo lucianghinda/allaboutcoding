@@ -125,7 +125,7 @@ I think this is a much more elegant solution that makes the code simpler to read
 
 Updates:
 
-* 17 August 2024 - Added a new solution to fix the splat operator error from Sorbet provided by Ufuk Kayserilioglu
+* 17 August 2024 - Added a [new solution](https://allaboutcoding.ghinda.com/two-insights-from-using-sorbet#heading-a-more-elegant-solution) to fix the splat operator error from Sorbet provided by Ufuk Kayserilioglu
     
 * 17 August 2024 - Updated the final example to use the latest Sorbet feature that knows to infer the type of the constants and so removes the need to use `T.let`
     
