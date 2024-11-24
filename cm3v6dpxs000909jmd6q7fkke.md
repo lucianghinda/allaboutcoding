@@ -11,25 +11,35 @@ tags: writing, ruby, ruby-on-rails, summary
 
 ---
 
-### Monday: [Short Ruby Newsletter - edition 114](https://newsletter.shortruby.com/p/edition-114)
+### Monday
 
-My week started (as it always starts) with publishing the Short Ruby Newsletter on Monday: [**https://newsletter.shortruby.com/p/edition-11**](https://newsletter.shortruby.com/p/edition-114)[**4**](https://newsletter.shortruby.com/p/edition-114)
+My week started (as it always starts) with publishing the Short Ruby Newsletter on Monday
 
-### Tuesday: [Three Ruby Links #9](https://newsletter.shortruby.com/p/three-ruby-links-9)
+[Short Ruby Newsletter - edition 114](https://newsletter.shortruby.com/p/edition-114)
 
-I followed up on **Tuesday** with another series that I am starting that I call “Three Ruby Links”: [**https://newsletter.shortruby.com/p/three-ruby-links-9**](https://newsletter.shortruby.com/p/three-ruby-links-9)
+### Tuesday
 
-### Wednesday: [Tests should be simple](https://goodenoughtesting.com/articles/tests-should-be-simple)
+I followed up on **Tuesday** with another series that I am starting that I call “Three Ruby Links”
 
-During my [GoodEnoughTesting](https://goodenoughtesting.com) workshops we discuss in the beginning expectations from the training. There is always an expectation about best practices when writing tests and I tried in this article to pin down some high-level simple rules that I try to apply when writing test code: [https://goodenoughtesting.com/articles/tests-should-be-simple](https://goodenoughtesting.com/articles/tests-should-be-simple)
+[Three Ruby Links #9](https://newsletter.shortruby.com/p/three-ruby-links-9)
 
-### Thursday: [Using Pattern Matching in Ruby to act based on array contents](https://notes.ghinda.com/post/using-pattern-matching-in-ruby-to-act-based-on-array-contents)
+### Wednesday
 
-This is a small post showing how to use pattern matching in Ruby to check if an array is empty, not empty, or has some specific kind of objects inside: [https://notes.ghinda.com/post/using-pattern-matching-in-ruby-to-act-based-on-array-contents](https://notes.ghinda.com/post/using-pattern-matching-in-ruby-to-act-based-on-array-contents)
+During my [GoodEnoughTesting](https://goodenoughtesting.com) workshops we discuss in the beginning expectations from the training. There is always an expectation about best practices when writing tests and I tried in this article to pin down some high-level simple rules that I try to apply when writing test code
 
-### Friday: [RBS inline code sample from Anycable example](https://notes.ghinda.com/post/rbs-inline-code-sample-from-anycable-example)
+[Tests should be simple](https://goodenoughtesting.com/articles/tests-should-be-simple)
 
-I was reading this article by Vladimir Dementyev and noticed an example of using RBS inline. Then I read the source code and noticed how he uses Prism to parse method definitions together with RBS type and generate function definitions for LLMs: [https://notes.ghinda.com/post/rbs-inline-code-sample-from-anycable-example](https://notes.ghinda.com/post/rbs-inline-code-sample-from-anycable-example)
+### Thursday: 
+
+This is a small post showing how to use pattern matching in Ruby to check if an array is empty, not empty, or has some specific kind of objects inside
+
+[Using Pattern Matching in Ruby to act based on array contents](https://notes.ghinda.com/post/using-pattern-matching-in-ruby-to-act-based-on-array-contents)
+
+### Friday
+
+I was reading this article by Vladimir Dementyev and noticed an example of using RBS inline. Then I read the source code and noticed how he uses Prism to parse method definitions together with RBS type and generate function definitions for LLMs
+
+[RBS inline code sample from Anycable example](https://notes.ghinda.com/post/rbs-inline-code-sample-from-anycable-example)
 
 ---
 
