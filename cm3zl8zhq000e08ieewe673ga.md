@@ -111,7 +111,10 @@ And then I created simple versions of this component.
 module Menu
   class PrimaryComponent < ItemComponent
     def initialize(url:, text: nil, **options)
-      super(url: url, text: text, pulsate: false, text_color: "text-gray-800", **options)
+      pulsate = false
+      text_color = "text-gray-800"
+
+      super(url:, text:, pulsate:, text_color:, **options)
     end
   end
 end
@@ -123,7 +126,10 @@ end
 module Menu
   class BlueComponent < ItemComponent
     def initialize(url:, text: nil, **options)
-      super(url: url, text: text, pulsate: false, text_color: "text-blue-700", **options)
+      pulsate = false
+      text_color = "text-blue-700"
+
+      super(url:, text:, pulsate:, text_color:, **options)
     end
   end
 end
@@ -135,7 +141,10 @@ end
 module Menu
   class PulsatingComponent < ItemComponent
     def initialize(url:, text: nil, **options)
-      super(url: url, text: text, pulsate: true, text_color: "text-blue-700", **options)
+      pulsate = true
+      text_color = "text-blue-700"
+
+      super(url:, text:, pulsate:, text_color:, **options)
     end
   end
 end
