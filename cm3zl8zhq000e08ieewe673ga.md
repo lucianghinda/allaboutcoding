@@ -168,6 +168,6 @@ If you like this article:
 
 👉 Join my [**Short Ruby Newsletter**](https://newsletter.shortruby.com/) for weekly Ruby updates from the community and visit [**rubyandrails.info**](http://rubyandrails.info/)**, a directory with learning content about Ruby.**
 
-🤝 Let's connect on [Bluesky](https://bsky.app/profile/lucianghinda.com), [Ruby.social](http://ruby.social/), [Linkedin](https://linkedin.com/in/lucianghinda), [Twitter](https://x.com/lucianghinda) where I post mostly about Ruby and Ruby on Rails.
+🤝 Let's connect on [Bluesky](https://bsky.app/profile/lucianghinda.com), [Ruby.social](https://ruby.social/@lucian), [Linkedin](https://linkedin.com/in/lucianghinda), [Twitter](https://x.com/lucianghinda) where I post mostly about Ruby and Ruby on Rails.
 
 🎥 Follow me on [**my YouTube channel**](https://www.youtube.com/@shortruby) for short videos about Ruby/Rails
