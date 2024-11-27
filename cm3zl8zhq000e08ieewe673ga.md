@@ -54,7 +54,7 @@ And now I can use it in the header menu:
 ```xml
 <a href="" class="motion-safe:animate-pulsate"> 
   A pulsating link 
-</a> 
+</a>
 ```
 
 I used `motion-safe` modifier to respected the choice of the user if they requested reduced motion.
@@ -150,3 +150,15 @@ And then at the end I combine them inside an ERB file like this:
 <%= render Menu::PrimaryComponent.new(url: page_path("contact"), text: "Contact") %>
 <%= render Menu::BlueComponent.new(url: participants_sign_in_path, text: "Login") %>
 ```
+
+---
+
+If you like this article:
+
+👐 Join my live workshop about [**goodenoughtesting.com**](http://goodenoughtesting.com/) **\- to learn test design techniques for writing effective tests**
+
+👉 Join my [**Short Ruby Newsletter**](https://newsletter.shortruby.com/) for weekly Ruby updates from the community and visit [**rubyandrails.info**](http://rubyandrails.info/)**, a directory with learning content about Ruby.**
+
+🤝 Let's connect on [Bluesky](https://bsky.app/profile/lucianghinda.com), [Ruby.social](http://ruby.social/), [Linkedin](https://linkedin.com/in/lucianghinda), [Twitter](https://x.com/lucianghinda) where I post mostly about Ruby and Ruby on Rails.
+
+🎥 Follow me on [**my YouTube channel**](https://www.youtube.com/@shortruby) for short videos about Ruby/Rails
