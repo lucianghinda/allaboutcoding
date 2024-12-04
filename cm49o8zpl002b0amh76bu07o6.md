@@ -75,6 +75,8 @@ This just opens the DemoContent class method (after it was loaded) and will add 
 
 It worked and after I did a `rails db:reset` and opened the web app, there I had the beautify of nothing: no book created. Which is wat I was trying to solve so now my book has the `id` = `1`.
 
+By the way a great talk about the Rails boot process is this one from [Xavier Noria](https://hashref.com) at Rails World: [https://www.youtube.com/watch?v=Kx0ihLCTEgE](https://www.youtube.com/watch?v=Kx0ihLCTEgE)
+
 ## Other ways to override a class method
 
 There I asked myself, what are other waysto override a class method without editing the file where the class is defined and I got a few ideas. Probably there are much more then the ones I tried here.
