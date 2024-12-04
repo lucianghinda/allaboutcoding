@@ -13,7 +13,7 @@ tags: programming-blogs, ruby, ruby-on-rails
 
 ### The context
 
-Recently, I installed the Writebook a Ruby on Rails app from [37signals](https://37signals.com) because I wanted to publish some long essays or long-form articles about testing for developers.
+Recently, I installed the [Writebook](https://once.com/writebook) a Ruby on Rails app from [37signals](https://37signals.com) because I wanted to publish some long essays or long-form articles about testing for developers.
 
 The installation worked like a charm, including replacing Rescue with Solid Queue and adding Solid Cable. I installed it manually, not via the `once` tool as I already have other projects on that specific server and did not had enough time to think how deploying it via the provided tool will affect the other projects. This means I would have to update it when an update came around manually.
 
