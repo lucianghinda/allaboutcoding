@@ -193,7 +193,7 @@ def parse(client_response)
   parsed_body = parse_body(client_response)
   rate_limit = RateLimit.new(
     remaining: headers[:rate-limit-remaining],
-    remaining: headers[:rate-limit-reset].to_i
+    reset_in: headers[:rate-limit-reset].to_i
   )
 
   Response.new(
