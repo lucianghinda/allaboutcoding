@@ -30,7 +30,7 @@ parsed_data, result = something_with_two_outputs
 
 I think it's a valid question. I've seen code in real production apps that returns not just 2, but 6 values, which are then passed to other methods that use one or more of these values.
 
-For my purpose I want to use something else to have some names for what is happening inside. But it reflects the same question or patternȘ
+For my purpose I want to use something else to have some names for what is happening inside. But it reflects the same question or pattern
 
 ```ruby
 def parse(response)
@@ -103,15 +103,17 @@ Say we have a method that might return a String and an Integer:
 def processing
   return "Allowed", 1
 end
-```
 
-You can then consume this method like this:
-
-```ruby
 processing => [ String => result, Integer => user_id ] 
+# Will raise NoMatchingPatternError when not marching
 
-puts result
-puts user_id
+puts result # Allowed
+puts user_id # 1
+
+if processing in [ "Allowed", user_id ]
+  puts user_id # 1
+end
+# user_id will be nil when not matching
 ```
 
 This works and it makes the dependency on the order explicit but it is moving the solution for the dependency problem (dependency on the argument order and the possibility to introduce bugs by using the wrong order) to the callee to be aware of the order.
