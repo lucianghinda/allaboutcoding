@@ -37,7 +37,7 @@ While not about Ruby, I also wrote a short note about how I included on my GoodE
 
 I expanded a reply to a question about returning multiple values from a Ruby method into an article where I recommended using Data object:
 
-[How to Return Multiple Values from a Method in Ruby Using Data.define](https://allaboutcoding.ghinda.com/overriding-methods-in-ruby-on-rails-a-no-code-editing-approach)
+[How to Return Multiple Values from a Method in Ruby Using Data.define](https://allaboutcoding.ghinda.com/how-to-return-multiple-values-from-a-method-in-ruby-using-datadefine)
 
 ---
 
@@ -49,7 +49,7 @@ Next week, I will probably only publish the newsletter and maybe 3 Ruby Links as
 
 If you like this article:
 
-👐 Interested in learning how to improve your developer testing skills? Join my live online workshop about [**goodenoughtesting.com**](http://goodenoughtesting.com/) **- to learn test design techniques for writing effective tests**
+👐 Interested in learning how to improve your developer testing skills? Join my live online workshop about [**goodenoughtesting.com**](http://goodenoughtesting.com/) **\- to learn test design techniques for writing effective tests**
 
 👉 Join my [**Short Ruby Newsletter**](https://newsletter.shortruby.com/) for weekly Ruby updates from the community and visit [**rubyandrails.info**](http://rubyandrails.info/)**, a directory with learning content about Ruby.**
 
