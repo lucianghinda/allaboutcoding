@@ -260,6 +260,16 @@ Here is how the JSON-LD schema for a blog post might look like:
 }
 ```
 
+## Tools
+
+There are many more variations of how to combine various items and this way communicate to a crawler or search engine what you want them to know about your blog.
+
+Here are some tools you can use to validate your JSON-LD schema and check how Google parses rich snippets:
+
+[https://search.google.com/test/rich-results](https://search.google.com/test/rich-results)
+
+[https://validator.schema.org](https://validator.schema.org)
+
 ---
 
 If you like this article:
