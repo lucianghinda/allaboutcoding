@@ -122,7 +122,7 @@ price = Price.new(amount: 50, currency: "USD")
 
 # The following will raise an exception
 price.amount = 50 
-# => `<main>': undefined method `value=' for #<data Amount value=50, currency="USD"> (NoMethodError)
+# => `<main>': undefined method `amount=' for #<data Price amount=50, currency="USD"> (NoMethodError)
 ```
 
 Even if you try to define a setter, it will not work:
@@ -136,8 +136,8 @@ Price = Data.define(:amount, :currency) do
 end
 
 price = Price.new(amount: 50, currency: "USD")
-price.value = 100 # This will return an exception
-# => in 'Amount#value=': can't modify frozen #<Class:#<Amount:0x00000001259166a0>>: #<data Amount value=20, currency="USD"> (FrozenError)
+price.amount = 100 # This will return an exception
+# => in 'Price#amount=': can't modify frozen #<Class:#<Price:0x00000001259166a0>>: #<data Price amount=20, currency="USD"> (FrozenError)
 ```
 
 2. **It is comparable by type and value**
