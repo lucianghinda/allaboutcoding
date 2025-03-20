@@ -268,7 +268,7 @@ It supports also providing a block when creating the structure to add extra meth
 
 Please note that the Data objects are frozen but not deep frozen. That means that if you put inside a Data object attribute a structure that is not immutable then you can change those properties.
 
-**My advice is to combine Data objects only with Data objects to make sure that everything remains immutable or with other immutable objects.**
+**My advice is to combine Data objects only with Data objects or immutable or immediate objects to make sure that everything remains immutable.**
 
 I recommend you to do this:
 
