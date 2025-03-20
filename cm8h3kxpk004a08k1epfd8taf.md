@@ -323,7 +323,6 @@ If you want to read more about this I recommend at least two resources:
 
 * The feature request on the Ruby Bug Tracker: [https://bugs.ruby-lang.org/issues/16122](https://bugs.ruby-lang.org/issues/16122)
     
-
 * The great documentation about it maintain by Victor Shepelev here [https://rubyreferences.github.io/rubychanges/3.2.html#data-new-immutable-value-object-class](https://rubyreferences.github.io/rubychanges/3.2.html#data-new-immutable-value-object-class)
     
 
