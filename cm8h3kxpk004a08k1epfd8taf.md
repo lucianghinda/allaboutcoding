@@ -313,6 +313,24 @@ price
 
 So you need to take care of freezing the objects that you put inside yourself if you want them to remain unchanged.
 
+### **Trick: You can use Ractor shareable to deep freeze a Data object**
+
+This is probably not the purpose of the Ractor.make\_shareable method, but it is a nice trick to try:
+
+```ruby
+Currency = Struct.new(:code, :name, :symbol, :decimal, keyword_init: true)
+Price = Data.define(:amount, :currency)
+
+EUR = Currency.new(code: "EUR", name: "EURO", symbol: "€", decimal: 2)
+price = Ractor.make_shareable(Price.new(amount: 50, currency: EUR))
+# => #<data Price amount=50, 
+# => currency=#<struct Currency code="EUR", name="EURO", symbol="€", decimal=2>>
+
+price.currency.code = "MyEUR"
+# => in '<main>': can't modify frozen 
+# => Currency: #<struct Currency code="EUR", name="EURO", symbol="€", decimal=2> (FrozenError)
+```
+
 ## Some conclusions
 
 I think the Data is a great addition to the Ruby language and I try to reach out to it everytime I need to create a value object. I like the immutability and the comparison by type and value that is created by default.
