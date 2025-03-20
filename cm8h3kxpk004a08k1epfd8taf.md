@@ -130,8 +130,8 @@ Even if you try to define a setter, it will not work:
 ```ruby
 
 Price = Data.define(:amount, :currency) do
-    def value=(new_value)
-      @value = new_value
+    def amount=(new_amount)
+      @amount = new_amount
     end
 end
 
