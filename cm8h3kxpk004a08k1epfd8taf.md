@@ -343,6 +343,8 @@ If you want to read more about this I recommend at least two resources:
     
 * The great documentation about it maintain by Victor Shepelev here [https://rubyreferences.github.io/rubychanges/3.2.html#data-new-immutable-value-object-class](https://rubyreferences.github.io/rubychanges/3.2.html#data-new-immutable-value-object-class)
     
+* This article [https://thoughtbot.com/blog/value-object-semantics-in-ruby](https://thoughtbot.com/blog/value-object-semantics-in-ruby) that goes into details about comparabilityt of two value objects
+    
 
 ---
 
