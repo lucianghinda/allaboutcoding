@@ -337,6 +337,8 @@ I think the Data is a great addition to the Ruby language and I try to reach out
 
 It also defines `deconstruct` and `deconstruct_keys` if you want to use the Data object in pattern matching (Struct defines them too in case you want to use Struct).
 
+## Read more
+
 If you want to read more about this I recommend at least two resources:
 
 * The feature request on the Ruby Bug Tracker: [https://bugs.ruby-lang.org/issues/16122](https://bugs.ruby-lang.org/issues/16122)
