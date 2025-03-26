@@ -7,7 +7,6 @@ cuid: cm8h3kxpk004a08k1epfd8taf
 slug: how-to-create-value-objects-in-ruby-the-idiomatic-way
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1742459187463/2aac11ab-745f-4302-83ee-79d7949614db.png
 ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1742459200982/22875328-49e0-409b-a1b9-4b1d2986bed5.png
-tags: programming-blogs, ruby, ruby-on-rails, best-practices
 
 ---
 
