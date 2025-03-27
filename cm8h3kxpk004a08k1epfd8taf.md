@@ -338,6 +338,8 @@ It also defines `deconstruct` and `deconstruct_keys` if you want to use the Data
 
 ## Read more
 
+I published a followup article where I show some [real world examples of value objects created with the Data class](https://allaboutcoding.ghinda.com/example-of-value-objects-using-rubys-data-class).
+
 If you want to read more about this I recommend at least two resources:
 
 * The feature request on the Ruby Bug Tracker: [https://bugs.ruby-lang.org/issues/16122](https://bugs.ruby-lang.org/issues/16122)
