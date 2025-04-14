@@ -270,6 +270,10 @@ Here are some tools you can use to validate your JSON-LD schema and check how Go
 
 [https://validator.schema.org](https://validator.schema.org)
 
+## Further reading
+
+Avo published a very nice article about how to add the schema markup on a Rails app → [**Adding Structured Data to a Rails application**](https://avohq.io/blog/structured-data-rails)
+
 ---
 
 If you like this article:
