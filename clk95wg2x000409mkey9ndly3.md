@@ -30,7 +30,7 @@ Here are some places where I would submit an article:
     
 * [RubyWeekly](https://rubyweekly.com) - while there is no official way to submit an article for RubyWeekly it is worth trying to suggest your article there as it has the largest audience. One way would be to subscribe to the newsletter and then reply to an issue with your proposal.
     
-* [RubyRadar](https://www.rubyradar.com) - you can submit your article to be included in the Ruby Radar newsletter by creating a discussion [on their Github repo](https://github.com/therubyradar/submissions/discussions/new/choose)
+* [<s>RubyRadar</s>](https://www.rubyradar.com) <s> - you can submit your article to be included in the Ruby Radar newsletter by creating a discussion </s> [<s>on their Github repo</s>](https://github.com/therubyradar/submissions/discussions/new/choose) - This newsletter is not active anymore
     
 * [Short Ruby Newsletter](https://newsletter.shortruby.com) - you can submit your article as an issue to this [Github Repo](https://github.com/ShortRuby/submit)
     
