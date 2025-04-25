@@ -337,8 +337,6 @@ And then you can pass in the controller the `payment` using `locals`:
 
 ```ruby
 class PaymentsController < ActionController::Base
-  include Rails.application.routes.url_helpers
-
   def show
     @payment = Object.new
 
