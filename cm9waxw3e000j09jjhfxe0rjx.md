@@ -309,7 +309,7 @@ Expected: "EUR"
 2 runs, 2 assertions, 1 failures, 0 errors, 0 skips
 ```
 
-### How to use this in Rails
+## How to use this in Rails
 
 When talking about Rails I generally think being close to defaults is the sane choice. Still you can use this technique there too with either a getter or with a local variable instead of an instance variable.
 
