@@ -445,7 +445,7 @@ I want to assert that this change is not so big. Because you are already doing t
 2. Memoization and Lazy Initiatialization
     
 
-For example when having an instance variable that is used as a boolean we mostly write a method to make it a predicate. See in this example the `vat_predicate?` method:
+For example when having an instance variable that is used as a boolean we mostly write a method to make it a predicate. See in this example the `vat_included?` method:
 
 ```ruby
 class InvoiceBuilder
