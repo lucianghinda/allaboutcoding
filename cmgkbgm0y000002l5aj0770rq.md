@@ -20,7 +20,7 @@ If microsecond precision is not required when testing Time, DateTime, or ActiveS
 
 ## Comparing two DateTime values
 
-For example, to compare two DateTime values:
+For example, to compare two DateTime values maybe you can try to write it like this:
 
 ```ruby
 def test_question_answered_at_the_same_as_survey
@@ -38,7 +38,9 @@ This approach can cause issues if there are microsecond delays when saving value
 
 There are several ways to address this issue.
 
-One option is to use .change to set microseconds to zero.
+### Using `.change`
+
+One option is to use [`.change`](https://api.rubyonrails.org/classes/ActiveSupport/TimeWithZone.html#method-i-change) to set microseconds to zero.
 
 ```ruby
 def test_question_answered_at_the_same_as_survey
@@ -51,6 +53,8 @@ describe 'question#answered_at'
    end
 end
 ```
+
+### Using `.to_i`
 
 Alternatively, you can use the [`Time#to_i`](https://docs.ruby-lang.org/en/master/Time.html#method-i-to_i) method, which truncates subseconds:
 
@@ -66,7 +70,56 @@ describe 'question#answered_at'
 end
 ```
 
-I recommend using iso8601 for this comparison:
+### Using `.round`
+
+You can use from Ruby the [`Time#round`](https://docs.ruby-lang.org/en/master/Time.html#method-i-round) where you can specific how to round the seconds value and doing `Time#round` is equivalent to `Time#round(0)` that means without milliseconds:
+
+```ruby
+def test_answer_filled_at_the_same_as_survey  
+  assert_equal(
+    question.answered_at.round, 
+    survey.answered_at.round
+  )
+end
+
+describe 'question#answered_at' do
+  it 'is the same as survey' do   
+    expect(
+      question.answered_at.round
+    ).to eq(survey.answered_at.round
+  end  
+end  
+```
+
+### **Another option only for RSpec will be** `be_within`
+
+In RSpec there is a specific helper called [`be_within`](https://rspec.info/features/3-13/rspec-expectations/built-in-matchers/be-within/) which will convert Time to float and then check if the value is within a delta:
+
+```ruby
+describe 'question#answered_at' do
+  it 'is the same as survey' do   
+    expect(question.answered_at.round).to be_within(1).of(survey.answered_at)
+  end  
+end  
+```
+
+### In Minitest there is `assert_in_delta`
+
+A similar helper exists in Minitest called [`assert_in_delta`](https://docs.seattlerb.org/minitest/Minitest/Assertions.html#method-i-assert_in_delta) that also transforms to float and then compare it if it is withing a delta:
+
+```ruby
+def test_answer_filled_at_the_same_as_survey  
+  assert_in_delta(
+    question.answered_at,
+    survey.answered_at,
+    1.0
+  )
+end
+```
+
+### Using `.iso8601`
+
+I recommend using [iso8601](https://api.rubyonrails.org/classes/ActiveSupport/TimeWithZone.html#method-i-iso8601) for this comparison:
 
 ```ruby
 def test_question_answered_at_the_same_as_survey
