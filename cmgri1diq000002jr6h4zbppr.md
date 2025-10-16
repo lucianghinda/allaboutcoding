@@ -1,7 +1,7 @@
 ---
 title: "Ruby on Rails: Loading Locales with Yes, No, On, and Off"
 seoTitle: "Localization in Ruby on Rails: Yes/No, On/Off"
-seoDescription: "Ruby on Rails uses `psych` for YAML locale processing that will load Yes/No, On/Off as booleans "
+seoDescription: "Ruby on Rails uses `psych` for YAML locale processing that will load Yes/No, On/Off as booleans"
 datePublished: Wed Oct 15 2025 04:36:51 GMT+0000 (Coordinated Universal Time)
 cuid: cmgri1diq000002jr6h4zbppr
 slug: ruby-on-rails-loading-locales-with-yes-no-on-and-off
@@ -55,7 +55,7 @@ assert_equal true, Psych.safe_load("--- true")
 
 assert_equal true, Psych.safe_load("--- ON")
 assert_equal true, Psych.safe_load("--- on")
-assert_equal true, Psych.safe_load("--- On") 
+assert_equal true, Psych.safe_load("--- On")
 ```
 
 Notice that it will transform all of those values in `TrueClass` / `true` .
@@ -136,3 +136,34 @@ Here is the `test_boolean.rb` from `syck` and notice there `YAML spec says "y" a
       assert_equal "N", Psych.load("--- N")
     end
 ```
+
+## How to protect from this using RubySchema.org
+
+[RubySchema](https://github.com/yippee-fun/rubyschema):
+
+> Ruby schema is a collection of JSON schemas for common Ruby gems. With these schemas, we can now enjoy auto-complete, validation and inline documentation right in our YAML files.
+
+If your code editor supports YAML Language Server (and most of them do) make sure you have it installed and then if you add the following lines at the beginning of your YAML locales file:
+
+```yaml
+# yaml-language-server: $schema=https://www.rubyschema.org/i18n/locale.json
+%YAML 1.1
+---
+```
+
+Then in case you will write inside the file something like this:
+
+```yaml
+# yaml-language-server: $schema=https://www.rubyschema.org/i18n/locale.json
+%YAML 1.1
+---
+en:
+  yes: "Yes"
+  on: "On"
+```
+
+Then your editor will show you a message like this:
+
+![Screenshot of Neovim displaying an error message about using yes, no as locales key](https://cdn.hashnode.com/res/hashnode/image/upload/v1760585180174/2b5457f6-efb1-4f43-8097-bfc111ed5a43.png align="center")
+
+![Screenshot of Zed displaying an error mesaage about using `on` as key in locales](https://cdn.hashnode.com/res/hashnode/image/upload/v1760585231589/23879934-6c61-4b3a-9b7d-1cc95db1d1cf.png align="center")
