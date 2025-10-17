@@ -167,3 +167,16 @@ Then your editor will show you a message like this:
 ![Screenshot of Neovim displaying an error message about using yes, no as locales key](https://cdn.hashnode.com/res/hashnode/image/upload/v1760585180174/2b5457f6-efb1-4f43-8097-bfc111ed5a43.png align="center")
 
 ![Screenshot of Zed displaying an error mesaage about using `on` as key in locales](https://cdn.hashnode.com/res/hashnode/image/upload/v1760585231589/23879934-6c61-4b3a-9b7d-1cc95db1d1cf.png align="center")
+
+
+---
+
+👉 If you like this article and want it in your inbox each week, [subscribe to my newsletter](https://newsletter.lucianghinda.com). You’ll find **ideas on Ruby, software development, software testing, building products and workshops**, plus notes on creativity, tech trends, and whatever else sparks my curiosity.
+
+👐 Want to improve your **developer testing skills**? Visit [goodenoughtesting.com/articles](https://goodenoughtesting.com/articles) to discover resources on testing for developers.
+
+👉 [Join my Short Ruby Newsletter](https://newsletter.shortruby.com) for weekly Ruby updates and visit rubyandrails.info, a directory of Ruby learning content.
+
+🤝 Connect with me on [Linkedin](https://linkedin.com/in/lucianghinda), [Bluesky](https://bsky.app/profile/lucianghinda.com), [Ruby.social](https://ruby.social/@lucian), , and [Twitter](https://x.com/lucianghinda), where I mostly post about Ruby and Ruby on Rails.
+
+🎥 Follow [my YouTube channel](https://www.youtube.com/@shortruby) for short videos about Ruby and Rails.
