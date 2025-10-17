@@ -164,3 +164,16 @@ expect(question.answered_at.iso8601).to eq "2025-10-07T13:35:25+03:00"
 I know that someone might say well to understand what iso8601 does tyou have to know about it. But here I think it is a normal expectation for an web engineer to know about ISO8601 standard when working with time.
 
 Of course you should choose the one that works best for you.
+
+
+---
+
+👉 If you like this article and want it in your inbox each week, [subscribe to my newsletter](https://newsletter.lucianghinda.com). You’ll find **ideas on Ruby, software development, software testing, building products and workshops**, plus notes on creativity, tech trends, and whatever else sparks my curiosity.
+
+👐 Want to improve your **developer testing skills**? Visit [goodenoughtesting.com/articles](https://goodenoughtesting.com/articles) to discover resources on testing for developers.
+
+👉 [Join my Short Ruby Newsletter](https://newsletter.shortruby.com) for weekly Ruby updates and visit rubyandrails.info, a directory of Ruby learning content.
+
+🤝 Connect with me on [Linkedin](https://linkedin.com/in/lucianghinda), [Bluesky](https://bsky.app/profile/lucianghinda.com), [Ruby.social](https://ruby.social/@lucian), , and [Twitter](https://x.com/lucianghinda), where I mostly post about Ruby and Ruby on Rails.
+
+🎥 Follow [my YouTube channel](https://www.youtube.com/@shortruby) for short videos about Ruby and Rails.
