@@ -91,7 +91,7 @@ end
 
 Which version makes it clearer that the organisation is created before each test?
 
-## Reason 2: When needed, the order of creating the objects is easily visible
+## Reason 2: It hides the order of execution of preconditions
 
 Here is a comparison:
 
@@ -180,24 +180,6 @@ class ThingTest < Minitest::Test
 
        assert_equal "my-name", account_a.computed_slug  
    end  
-end
-```
-
-Since this is plain Ruby, you can also do the following:
-
-```ruby
-class ThingTest < Minitest::Test  
-   def test_computed_slug_returns_with_dashes  
-       account_a.name = "My Name"
-
-       assert_equal "my-name", account_a.computed_slug  
-   end 
-   
-   private 
-   
-   def account_a    = build(:user, email: email)  
-   def account_b    = build(:account, user: user)  
-   def organisation =  build(:organisation, account: account)  
 end
 ```
 
